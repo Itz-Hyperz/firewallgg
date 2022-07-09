@@ -1,0 +1,37 @@
+html, body {
+    overflow-x: hidden !important;
+}
+
+body {
+    background-image: url('bg.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    width: 100%;
+    height:100%;
+    margin: auto;
+    padding: 0;
+    background-color: rgba(0, 0, 0, .9);
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: color 1s
+}
+
+a:hover {
+    color: rgb(0, 162, 255);
+}
+
+h1, h3 {
+    color: white;
+    text-align: center;
+    transition: color 1s
+}
+
+h1:hover, h3:hover {
+    color: rgb(0, 162, 255);
+}
