@@ -18,7 +18,7 @@ For the basics, using the [Website](https://firewall.hyperz.net) or the [Desktop
 
 On the other hand, integrating it into your system may be a little bit more difficult. Most of our target audience uses FaxStore. So, if you're looking to easily integrate, look no-further than our built-in FaxStore extension that can be found [here](#input).
 
-Yet, if you are entirely on your own, feel free to reference our public documentation for our Node Module [here](#input) or for our Web API you can look [here](#input).
+Yet, if you are entirely on your own, feel free to reference our public documentation for our Node Module [here](https://npmjs.com/package/firewallgg) or for our Web API you can look [here](https://firewall.hyperz.net/api).
 
 # Credits
 [@Hyperz](https://github.com/itz-hyperz) - *Original creation.*
