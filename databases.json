@@ -3,6 +3,7 @@
     "name": "HD | Blacklists",
     "active": true,
     "requestUrl": "https://bans.hyperz.net/firewallgg/getban/",
-    "method": "get"
+    "method": "get",
+    "appeal": "NA"
   }
 ]
