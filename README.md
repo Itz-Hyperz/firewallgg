@@ -22,3 +22,5 @@ Yet, if you are entirely on your own, feel free to reference our public document
 
 # Credits
 [@Hyperz](https://github.com/itz-hyperz) - *Original creation.*
+
+![web example](https://cdn.hyperz.net/u/main/eQyDlN1.png)
