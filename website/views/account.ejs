@@ -1,0 +1,27 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FirewallGG - Account</title>
+        <link rel="icon" href="/assets/logo.png">
+    </head>
+    <body>
+        <%- include('_header') %>
+        <div class="container text-white text-center bg-dark" style="border-radius: 1em;">
+            <br>
+            <h1 style="font-weight: 700;">Welcome, <%= user.username %>!</h1>
+            <br>
+            <% if(bannedList.length >= 1) { %>
+                <div class="alert alert-danger" role="alert">
+                    You are banned in <%= bannedList.length %> database(s)!
+                </div>
+            <% } else { %>
+                <div class="alert alert-success" role="alert">
+                    You are not currently banned in any database!
+                </div>
+            <% } %>
+            <br>
+        </div>
+        <%- include('_footer') %>
+    </body>
+</html>

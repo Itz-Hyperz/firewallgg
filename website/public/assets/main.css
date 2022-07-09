@@ -3,7 +3,6 @@ html, body {
 }
 
 body {
-    background-image: url('bg.jpg') !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-position: center center !important;
@@ -11,9 +10,32 @@ body {
     height:100%;
     margin: auto;
     padding: 0;
-    background-color: rgba(0, 0, 0, .9);
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+    background-color: rgb(1,8,26);
     font-family: 'Montserrat', sans-serif;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 1em;
+    color: white;
+}
+
+.bg-dark {
+    background-color: #000f2e !important;
+}
+
+.bg-secondary {
+    background-color: #01081a !important;
+}
+
+.navbar-toggler {
+    color: white;
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 a {
@@ -29,9 +51,75 @@ a:hover {
 h1, h3 {
     color: white;
     text-align: center;
-    transition: color 1s
 }
 
-h1:hover, h3:hover {
-    color: rgb(0, 162, 255);
+.nav-link {
+    color: white;
+    font-weight: 700;
+    font-size: 1.6em;
+    transition: color 500ms;
+}
+
+.nav-link:hover {
+    color: #5865F2;
+}
+
+.form-control {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: rgba(0, 255, 102, .2) !important;
+    color: white !important;
+    border-color: rgb(255 255 255 / 70%) !important;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alert-danger {
+    background-color: rgba(255, 0, 0, 0.2) !important;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.7) !important;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dbInfos {
+    width: 60%;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1em;
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    /* background: #f1f1f1; */
+    background: rgba(255, 0, 0, 0);
+    /* background-color: transparent; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.075);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(136, 136, 136, 0.445);
+}
+
+::-webkit-scrollbar-corner {
+    background: rgba(136, 136, 136, 0.445);
 }

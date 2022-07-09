@@ -1,7 +1,6 @@
 const axios = require('axios');
 module.exports = async function(userId) {
     let bans = [];
-    let entry = 0;
     const databaseRequest = await axios({
         method: 'get',
         url: `https://raw.githubusercontent.com/Itz-Hyperz/firewallgg/main/databases.json`
@@ -25,9 +24,6 @@ module.exports = async function(userId) {
             };
             await bans.push(_json);
         };
-        entry++;
     });
-    while(entry >= databases.length) {
-        return bans;
-    };
+    return bans;
 };
