@@ -1,0 +1,9 @@
+[
+  {
+    "name": "HD | Blacklists",
+    "active": true,
+    "requestUrl": "https://bans.hyperz.net/firewallgg/getban/",
+    "previousBans": false,
+    "previousBansUrl": "https://bans.hyperz.net/firewallgg/pastbans/"
+  }
+]
