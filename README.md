@@ -1,4 +1,5 @@
 # FirewallGG
+<img align="right" height="60" width="60" alt="" src="https://github.com/Itz-Hyperz/firewallgg/blob/main/website/public/assets/logo.png?raw=true" />
 This is technically the second version of FirewallGG. Originally it was created with the same intention, however it never succeeded and required many rewrites. Now, it has been rewritten in a more stable fashion with better intentions towards serving the community.
 
 # How it works
