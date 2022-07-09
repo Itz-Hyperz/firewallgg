@@ -1,0 +1,28 @@
+{
+  "name": "firewallgg",
+  "version": "1.0.0",
+  "description": "FirewallGG is a simple program that will search all users in multiple database api's to see if they are banned in any of them. It will return a list of all databases the user is banned in as-well.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itz-hyperz/firewallgg.git"
+  },
+  "keywords": [
+    "FirewallGG",
+    "Discord",
+    "Ban",
+    "Database"
+  ],
+  "author": "Hyperz#0001",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itz-hyperz/firewallgg/issues"
+  },
+  "homepage": "https://github.com/itz-hyperz/firewallgg#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
