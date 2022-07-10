@@ -1,7 +1,7 @@
 [
   {
     "name": "HD | Blacklists",
-    "logoUrl": "https://store.hyperz.net/assets/logo.png",
+    "logoUrl": "https://cdn.hyperz.net/u/main/vJohEi4.png",
     "active": true,
     "requestUrl": "https://bans.hyperz.net/firewallgg/getban/",
     "method": "get"
