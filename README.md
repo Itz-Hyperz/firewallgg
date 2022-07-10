@@ -20,6 +20,21 @@ On the other hand, integrating it into your system may be a little bit more diff
 
 Yet, if you are entirely on your own, feel free to reference our public documentation for our Node Module [here](https://npmjs.com/package/firewallgg) or for our Web API you can look [here](https://firewall.hyperz.net/api).
 
+## API Object Structure
+Below is what gets returned from the physical API and you need to build your API endpoint to return a JSON object with these values as the *only returning values*.
+
+```json
+{
+  "active": yourObject.active,
+  "userid": yourObject.userid,
+  "reason": yourObject.reason,
+  "proof": yourObject.proof,
+  "time": yourObject.time
+}
+```
+
+Upon creating a pull request to add to the [`databases.json`](https://github.com/Itz-Hyperz/firewallgg/blob/main/databases.json) file, you will *also* need to provide a screenshot of what *exactly* gets returned from that API endpoint on your end, this way developers can verify that these data types are correct with no excess-hassle.
+
 # Credits
 [@Hyperz](https://github.com/itz-hyperz) - *Original creation.*
 
