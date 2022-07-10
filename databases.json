@@ -22,5 +22,13 @@
     "active": true,
     "requestUrl": "https://api.strongertogether.network/v2/getuser/",
     "method": "get"
+  },
+  {
+    "name": "Xolify BanDB",
+    "themeColor": "#2f3136",
+    "logoUrl": "https://cdn.hyperz.net/u/xolify/NZpd7WC.png",
+    "active": true,
+    "requestUrl": "https://bandb.xolify.store/firewallgg/checkuser/",
+    "method": "get"
   }
 ]
