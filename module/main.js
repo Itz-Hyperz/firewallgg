@@ -30,6 +30,10 @@ async function code(userId) {
             // Stronger Together Array Check
             data = await data.find(o => o.active == 1);
         };
+        if(typeof data?.time == 'number' || typeof data?.date == 'number') {
+            data.time = data?.time?.toDateString();
+            data.date = data?.date?.toDateString();
+        };
         if(data?.active || data?.blacklistdata?.blacklisted || data?.blacklistdata?.active) {
             if(typeof data?.active == 'number' || typeof data?.blacklistdata?.blacklisted == 'number' || typeof data?.blacklistdata?.active == 'number') {
                 data.active = await booleanConvert(data?.active) || data?.active;
