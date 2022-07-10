@@ -14,8 +14,8 @@
             <% if(bannedList.length >= 1) { %>
                 <div class="container">
                     <% bannedList.forEach(function(ban) { %>
-                        <div class="row dbInfos bg-secondary">
-                            <p><span style="font-weight: 700;">Database:</span> <%= ban.database %></p>
+                        <div class="row dbInfos bg-secondary" style="border-color: <%= ban.themeColor %>; border-width: 0.1em; border-style: solid;">
+                            <h2 style="font-weight: 700; text-align: center; color: <%= ban.themeColor %>"><%= ban.database %></h2>
                             <p><span style="font-weight: 700;">Active:</span> <%= ban.active %></p>
                             <p><span style="font-weight: 700;">Reason:</span> <%= ban.reason %></p>
                             <p><span style="font-weight: 700;">Proof:</span> <%= ban.proof %></p>

@@ -38,6 +38,10 @@ body {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
+.hiddenHr {
+    display: none;
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -122,4 +126,14 @@ h1, h3 {
 
 ::-webkit-scrollbar-corner {
     background: rgba(136, 136, 136, 0.445);
+}
+
+@media only screen and (max-width: 540px) {
+    .col-sm-2 {
+        margin-bottom: 1em;
+    }
+    .hiddenHr {
+        display: block !important;
+        margin-bottom: 1em;
+    }
 }
