@@ -1,6 +1,7 @@
 [
   {
     "name": "HD | Blacklists",
+    "themeColor": "#144B9D",
     "logoUrl": "https://cdn.hyperz.net/u/main/vJohEi4.png",
     "active": true,
     "requestUrl": "https://bans.hyperz.net/firewallgg/getban/",
@@ -8,6 +9,7 @@
   },
   {
     "name": "Stop The Resellers",
+    "themeColor": "#DB6574",
     "logoUrl": "https://stoptheresellers.com/assets/images/logo.png",
     "active": true,
     "requestUrl": "https://stoptheresellers.com/api/v1/checkUser/",
@@ -15,6 +17,7 @@
   },
   {
     "name": "StrongerTogether",
+    "themeColor": "#FE3A06",
     "logoUrl": "https://strongertogether.network/assets/logo.png",
     "active": true,
     "requestUrl": "https://api.strongertogether.network/v2/getuser/",
