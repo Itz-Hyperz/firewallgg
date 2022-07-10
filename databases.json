@@ -5,5 +5,19 @@
     "active": true,
     "requestUrl": "https://bans.hyperz.net/firewallgg/getban/",
     "method": "get"
+  },
+  {
+    "name": "Stop The Resellers",
+    "logoUrl": "https://stoptheresellers.com/assets/images/logo.png",
+    "active": true,
+    "requestUrl": "https://stoptheresellers.com/api/v1/checkUser/",
+    "method": "get"
+  },
+  {
+    "name": "StrongerTogether",
+    "logoUrl": "https://strongertogether.network/assets/logo.png",
+    "active": true,
+    "requestUrl": "https://api.strongertogether.network/v2/getuser/",
+    "method": "get"
   }
 ]
