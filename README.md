@@ -1,6 +1,8 @@
 # FirewallGG
 <img align="right" height="60" width="60" alt="" src="https://github.com/Itz-Hyperz/firewallgg/blob/main/website/public/assets/logo.png?raw=true" />
 This is technically the second version of FirewallGG. Originally it was created with the same intention, however it never succeeded and required many rewrites. Now, it has been rewritten in a more stable fashion with better intentions towards serving the community.
+<br><br>
+FirewallGG is a "background-checking" tool. What it will allow you to do, is check a user's Discord Id and see if they are banned in any databases that are synced within the Firewall. This allows you to mass check databases with almost no hassle at all. Just a simple setup and you will be all good to go! 
 
 # How it works
 FirewallGG is **both** *client sided* and *server sided*. What this means is users on any platform can now use FirewallGG to it's fullest capabilities. From a backend database background check on users, to a website for ease of access anywhere, all the way out to a desktop process that will allow you to run user Ids and get a return on them easily.
