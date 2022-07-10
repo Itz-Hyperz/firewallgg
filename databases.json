@@ -26,7 +26,7 @@
   {
     "name": "Xolify BanDB",
     "themeColor": "#2f3136",
-    "logoUrl": "https://cdn.hyperz.net/u/xolify/NZpd7WC.png",
+    "logoUrl": "https://cdn.hyperz.net/u/xolify/5iYxLSp.png",
     "active": true,
     "requestUrl": "https://bandb.xolify.store/firewallgg/checkuser/",
     "method": "get"
