@@ -40,4 +40,4 @@ Upon creating a pull request to add to the [`databases.json`](https://github.com
 # Credits
 [@Hyperz](https://github.com/itz-hyperz) - *Original creation.*
 
-![web example](https://cdn.hyperz.net/u/main/eQyDlN1.png)
+![web example](https://cdn.hyperz.net/u/main/k6JIUtt.png)
