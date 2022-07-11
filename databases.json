@@ -39,7 +39,7 @@
     "name": "Diligent Defense",
     "themeColor": "#152653",
     "logoUrl": "https://media.discordapp.net/attachments/977838666611294259/978239078308929566/DD_-_Diligent_Defense.png",
-    "active": false,
+    "active": true,
     "requestUrl": "https://diligentdefense.xyz/firewallgg/checkuser/",
     "method": "get",
     "otherData": {}
