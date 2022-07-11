@@ -15,7 +15,9 @@ async function code(userId) {
     let databases = databaseRequest.data;
     for(let database of databases) {
         count++
+        if(!database.active) return;
         let themeColor = database.themeColor || '#FFFFFF';
+        let logoUrl = database.logoUrl || 'https://firewall.gg/assets/logo.png';
         let request;
         try {
             request = await axios({
@@ -38,12 +40,14 @@ async function code(userId) {
                 // Stronger Together Array Check
                 data = await data.find(o => o.active == 1);
             };
-            if(typeof data?.time == 'number' || typeof data?.date == 'number') {
-                if(typeof data?.time != 'undefiend') {
-                    data.time = data?.time?.toDateString();
-                };
-                if(typeof data?.date != 'undefined') {
-                    data.date = data?.date?.toDateString();
+            if(typeof data?.time != 'undefined') {
+                let date = new Date(data.time*1000);
+                if(!date.toString().toLowerCase().includes('invalid date')) {
+                    data.time = Number(data.time);
+                    date = new Date(data.time*1000);
+                    if(typeof data.time == 'number') {
+                        data.time = 'Unavailable.'
+                    }
                 };
             };
             if(data?.active || data?.blacklistdata?.blacklisted || data?.blacklistdata?.active) {
@@ -61,11 +65,13 @@ async function code(userId) {
                 _json = {
                     "database": database.name,
                     "themeColor": themeColor,
+                    "logoUrl": logoUrl,
                     "active": data?.active || data?.blacklistdata?.blacklisted || data?.blacklistdata?.active,
                     "userid": data?.userid || data?.user?.id || data?.user || 'NA',
                     "reason": data?.reason || data?.blacklistdata?.reason || data?.public_reason || 'NA',
                     "proof": data?.proof || 'None provided...',
-                    "time": data?.time || data?.blacklistdata?.date || 'NA'
+                    "time": data?.time || data?.blacklistdata?.date || 'NA',
+                    "otherData": database.otherData || {}
                 };
             };
         }
