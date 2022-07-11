@@ -50,6 +50,7 @@ app.get('/account', backend.checkAuth, async function(req, res) {
 app.get('/search/:userid', async function(req, res) {
     if(!req?.params?.userid) return res.redirect('/');
     let bannedList = await firewallgg(req.params.userid);
+    if(!bannedList) bannedList = [];
     res.render('search.ejs', { loggedIn: req.isAuthenticated(), bannedList: bannedList, searchId: req.params.userid });
 });
 
@@ -69,6 +70,7 @@ app.get('/api/checkuser/:userid', async function(req, res) {
         return res.type('json').send(JSON.stringify(json_, null, 4) + '\n');
     } else {
         let json_ = await firewallgg(req.params.userid);
+        if(!json_) json_ = [];
         res.type('json').send(JSON.stringify(json_, null, 4) + '\n');
     };
 });
