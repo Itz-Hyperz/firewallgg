@@ -5,6 +5,9 @@
 */
 
 const con = MySQL_Database;
+const express = require("express");
+const app = express()
+app.listen(client.config.port || 3000)
 app.get('/firewallgg/checkuser/:userid', async function(req, res) {
     res.set('Access-Control-Allow-Origin', '*');
     if(!req?.params?.userid) return res.redirect('/');
