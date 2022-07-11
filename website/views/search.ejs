@@ -15,9 +15,17 @@
         <%- include('_header') %>
         <div class="container text-white text-start bg-dark" style="border-radius: 1em;">
             <br>
-            <h1 style="font-weight: 700;">Results: <%= searchId %></h1>
-            <br>
+            <h1 style="font-weight: 700; margin-bottom: 0.3em;">Search Results</h1>
             <% if(bannedList.length >= 1) { %>
+                <div class="alert alert-danger text-center" role="alert">
+                    <% if(bannedList.length > 1) { %>
+                        <%= bannedList.length %> ban results were found for user Id <code><%= searchId %></code>
+                    <% } else { %>
+                        <%= bannedList.length %> ban result was found for user Id <code><%= searchId %></code>
+                    <% }; %>
+                </div>
+                <hr>
+                <br>
                 <div class="container">
                     <% bannedList.forEach(function(ban) { %>
                         <div class="row dbInfos bg-secondary" style="border-color: <%= ban.themeColor %>; border-width: 0.1em; border-style: solid;">
@@ -33,8 +41,8 @@
                     <% }); %>
                 </div>
             <% } else { %>
-                <div class="alert alert-success" role="alert">
-                    This user is not currently banned!
+                <div class="alert alert-success text-center" role="alert">
+                    No ban results were found for user Id <code><%= searchId %></code>
                 </div>
             <% } %>
             <br>
