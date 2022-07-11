@@ -1,5 +1,10 @@
 [
   {
+    "name": "Hyperz Development",
+    "logo": "https://cdn.hyperz.net/u/main/5aXF5SK.png",
+    "url": "https://store.hyperz.net"
+  },
+  {
     "name": "Jake Hamblin",
     "logo": "https://jakehamblin.com/images/logo.png",
     "url": "https://jakehamblin.com"
@@ -8,5 +13,5 @@
     "name": "Weblutions",
     "logo": "https://faxes.zone/assets/logo.png",
     "url": "https://faxes.zone"
-  },
+  }
 ]
