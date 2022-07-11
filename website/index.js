@@ -50,7 +50,6 @@ app.get('/account', backend.checkAuth, async function(req, res) {
 app.get('/search/:userid', async function(req, res) {
     if(!req?.params?.userid) return res.redirect('/');
     let bannedList = await firewallgg(req.params.userid);
-    if(!bannedList) bannedList = [];
     res.render('search.ejs', { loggedIn: req.isAuthenticated(), bannedList: bannedList, searchId: req.params.userid });
 });
 
@@ -64,14 +63,73 @@ app.get('/api', async function(req, res) {
 });
 
 app.get('/api/checkuser/:userid', async function(req, res) {
-    res.set('Access-Control-Allow-Origin', '*');
     if(!req?.params?.userid) {
         let json_ = [];
         return res.type('json').send(JSON.stringify(json_, null, 4) + '\n');
     } else {
-        let json_ = await firewallgg(req.params.userid);
-        if(!json_) json_ = [];
-        res.type('json').send(JSON.stringify(json_, null, 4) + '\n');
+        try {
+            let userId = req.params.userid;
+            let bans = [];
+            let count = 0;
+            let check;
+            let databaseRequest = await axios({
+                method: 'get',
+                url: `https://raw.githubusercontent.com/Itz-Hyperz/firewallgg/main/databases.json`
+            });
+            let databases = databaseRequest.data;
+            for(let database of databases) {
+                count++
+                if(database.active) {
+                    let themeColor = database.themeColor || '#FFFFFF';
+                    let logoUrl = database.logoUrl || 'https://firewall.gg/assets/logo.png';
+                    let data = await makeRequest(database, userId)
+                    let _json = "STRING";
+                    if(Array.isArray(data)) {
+                        // Stronger Together Array Check
+                        data = await data.find(o => o.active == 1);
+                    };
+                    if(data?.blacklistdata?.blacklisted) {
+                        data.active = data?.blacklistdata?.blacklisted;
+                        data.userid = data?.user?.id || data?.user;
+                        data.reason = data?.blacklistdata?.reason || data?.public_reason;
+                        data.time = data?.blacklistdata?.date;
+                    };
+                    if(data?.active) {
+                        if(typeof data?.active == 'number') {
+                            if(typeof data?.active != 'undefined') {
+                                if(data?.active == 1) {
+                                    data.active = true;
+                                } else {
+                                    data.active = false;
+                                };
+                            };
+                        };
+                        _json = {
+                            "database": database.name,
+                            "themeColor": themeColor,
+                            "logoUrl": logoUrl,
+                            "active": data?.active,
+                            "userid": data?.userid || 'NA',
+                            "reason": data?.reason || 'NA',
+                            "proof": data?.proof || 'None provided...',
+                            "time": data?.time || 'NA',
+                            "otherData": database.otherData || {}
+                        };
+                    };
+                    if(typeof _json == 'object') {
+                        await bans.push(_json);
+                    };
+                    if(count >= databases.length) {
+                        check = true
+                    } else {
+                        check = false;
+                    };
+                };
+            };
+            while(check == true) {
+                res.type('json').send(JSON.stringify(bans, null, 4) + '\n');
+            };
+        } catch(e) {}
     };
 });
 
@@ -93,6 +151,28 @@ app.get('*', function(req, res){
 // Server Initialization
 app.listen(config.port)
 console.log(chalk.blue('FirewallGG Started on Port ' + config.port));
+
+// Functions
+async function makeRequest(database, userId) {
+    let request;
+    try {
+        request = await axios({
+            method: database.method,
+            url: `${database.requestUrl}${userId}`,
+            headers: {
+                'Authorization': `Bearer r1O.CJZ9LVtLKEs2ocpZ0sR1C3436H`
+            }
+        });
+    } catch(e) {
+        if(e.toString().includes('Request failed')) {
+            request = "failed";
+        };
+    };
+    if(request != "failed") {
+        if(!request?.data) return;
+        return request.data;
+    };
+};
 
 // Rejection Handler
 process.on('unhandledRejection', (err) => { 
