@@ -5,7 +5,8 @@
     "logoUrl": "https://cdn.hyperz.net/u/main/vJohEi4.png",
     "active": true,
     "requestUrl": "https://bans.hyperz.net/firewallgg/checkuser/",
-    "method": "get"
+    "method": "get",
+    "otherData": {}
   },
   {
     "name": "Stop The Resellers",
@@ -13,7 +14,8 @@
     "logoUrl": "https://stoptheresellers.com/assets/images/logo.png",
     "active": true,
     "requestUrl": "https://stoptheresellers.com/api/v1/checkUser/",
-    "method": "get"
+    "method": "get",
+    "otherData": {}
   },
   {
     "name": "StrongerTogether",
@@ -21,7 +23,8 @@
     "logoUrl": "https://strongertogether.network/assets/logo.png",
     "active": true,
     "requestUrl": "https://api.strongertogether.network/v2/getuser/",
-    "method": "get"
+    "method": "get",
+    "otherData": {}
   },
   {
     "name": "Xolify BanDB",
@@ -29,6 +32,7 @@
     "logoUrl": "https://cdn.hyperz.net/u/xolify/5iYxLSp.png",
     "active": true,
     "requestUrl": "https://bandb.xolify.store/firewallgg/checkuser/",
-    "method": "get"
+    "method": "get",
+    "otherData": {}
   }
 ]
