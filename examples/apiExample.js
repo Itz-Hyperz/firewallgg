@@ -1,7 +1,7 @@
 // This example was made for Node.JS
 
 /*
-    JSON NAME PLATES MUST STAY THE SAME AS BELOW
+    JSON KEYS MUST STAY THE SAME AS BELOW
 */
 
 const con = MySQL_Database;
