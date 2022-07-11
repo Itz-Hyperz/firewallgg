@@ -18,11 +18,11 @@
             <h1 style="font-weight: 700;">Welcome, <%= user.username %>!</h1>
             <br>
             <% if(bannedList.length >= 1) { %>
-                <div class="alert alert-danger" role="alert">
+                <div class="alert alert-danger text-center" role="alert">
                     You are banned in <%= bannedList.length %> database(s)!
                 </div>
             <% } else { %>
-                <div class="alert alert-success" role="alert">
+                <div class="alert alert-success text-center" role="alert">
                     You are not currently banned in any database!
                 </div>
             <% } %>
