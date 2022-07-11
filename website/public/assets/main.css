@@ -142,6 +142,24 @@ pre code {
     border-radius: 1em;
 }
 
+.banProofButton {
+    color: white;
+    text-align: center;
+    font-size: 0.6em;
+    width: 30%;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: white;
+    border-width: 0.3em;
+    max-width: 90%;
+    transition: border-color .3s ease-in-out;
+}
+
+.banProofButton:hover {
+    border-color: rgba(255, 255, 255, 0) !important;
+}
+
 /* Scrollbar */
 /* width */
 ::-webkit-scrollbar {
@@ -176,5 +194,17 @@ pre code {
     .hiddenHr {
         display: block !important;
         margin-bottom: 1em;
+    }
+    .dbInfos {
+        text-align: center;
+    }
+    .banTitle {
+        font-size: 1em;
+    }
+    .banProofButton {
+        width: 80%;
+    }
+    .resultsAlert {
+        width: 100%;
     }
 }
