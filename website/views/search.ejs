@@ -17,7 +17,7 @@
             <br>
             <h1 style="font-weight: 700; margin-bottom: 0.3em;">Search Results</h1>
             <% if(bannedList.length >= 1) { %>
-                <div class="alert alert-danger text-center" role="alert">
+                <div class="alert alert-danger text-center resultsAlert" role="alert">
                     <% if(bannedList.length > 1) { %>
                         <%= bannedList.length %> ban results were found for user Id <code><%= searchId %></code>
                     <% } else { %>
@@ -29,11 +29,14 @@
                 <div class="container">
                     <% bannedList.forEach(function(ban) { %>
                         <div class="row dbInfos bg-secondary" style="border-color: <%= ban.themeColor %>; border-width: 0.1em; border-style: solid;">
-                            <h2 style="font-weight: 700; text-align: center; color: <%= ban.themeColor %>"><%= ban.database %></h2>
-                            <p><span style="font-weight: 700;">Active:</span> <%= ban.active %></p>
-                            <p><span style="font-weight: 700;">Reason:</span> <%= ban.reason %></p>
-                            <p><span style="font-weight: 700;">Proof:</span> <%= ban.proof %></p>
-                            <p><span style="font-weight: 700;">Time:</span> <%= ban.time %></p>
+                            <h2 class="banTitle" style="font-weight: 700; text-align: center; color: <%= ban.themeColor %>"><%= ban.database %></h2>
+                            <p class="banActive"><span style="font-weight: 700;">Active:</span> <%= ban.active %></p>
+                            <p class="banReason"><span style="font-weight: 700;">Reason:</span> <%= ban.reason %></p>
+                            <p class="banProof"><span style="font-weight: 700;">Evidence:</span><br>
+                                <% if(!ban.proof.includes('http')) %>
+                                <a class="btn banProofButton" href="<%= ban.proof %>" target="_blank" style="background-color: <%= ban.themeColor %>">View</a>
+                            </p>
+                            <p class="banTime"><span style="font-weight: 700;">Time:</span> <%= ban.time %></p>
                         </div>
                         <br>
                         <hr>
