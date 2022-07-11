@@ -33,8 +33,13 @@ app.get('', async function(req, res) {
         method: 'get',
         url: `https://raw.githubusercontent.com/Itz-Hyperz/firewallgg/main/databases.json`
     });
+    let integs = await axios({
+        method: 'get',
+        url: 'https://raw.githubusercontent.com/Itz-Hyperz/firewallgg/main/partners.json'
+    });
     let databases = request?.data;
-    res.render('index.ejs', { loggedIn: req.isAuthenticated(), databases: databases });
+    let integrated = integs?.data;
+    res.render('index.ejs', { loggedIn: req.isAuthenticated(), databases: databases, integrated: integrated });
 });
 
 app.get('/account', backend.checkAuth, async function(req, res) {
