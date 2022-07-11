@@ -38,8 +38,8 @@ app.get('', async function(req, res) {
         url: 'https://raw.githubusercontent.com/Itz-Hyperz/firewallgg/main/partners.json'
     });
     let databases = request?.data;
-    let integrated = integs?.data;
-    res.render('index.ejs', { loggedIn: req.isAuthenticated(), databases: databases, integrated: integrated });
+    let partners = integs?.data;
+    res.render('index.ejs', { loggedIn: req.isAuthenticated(), databases: databases, partners: partners });
 });
 
 app.get('/account', backend.checkAuth, async function(req, res) {
