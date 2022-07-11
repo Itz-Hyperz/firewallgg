@@ -43,5 +43,14 @@
     "requestUrl": "https://diligentdefense.xyz/firewallgg/checkuser/",
     "method": "get",
     "otherData": {}
+  },
+  {
+    "name": "Clover Shield",
+    "themeColor": "#00b521",
+    "logoUrl": "https://media.discordapp.net/attachments/953742922778554460/996190084141420565/clover_logo.png",
+    "active": true,
+    "requestUrl": "https://clover-shield.wintersystems.tech/firewallgg/checkuser/",
+    "method": "get",
+    "otherData": {}
   }
 ]
