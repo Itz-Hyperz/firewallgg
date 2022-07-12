@@ -31,7 +31,7 @@
   },
   {
     "name": "Xolify BanDB",
-    "themeColor": "#2f3136",
+    "themeColor": "#ffffff",
     "logoUrl": "https://cdn.hyperz.net/u/xolify/5iYxLSp.png",
     "active": true,
     "requestUrl": "https://bandb.xolify.store/firewallgg/checkuser/",
