@@ -38,7 +38,7 @@
                     <% databases.forEach(function(database) { %>
                         <div class="col-sm-2">
                             <img  style="height: 10em; width: 10em; margin-bottom: 1em;" src="<%= database.logoUrl %>">
-                            <h4 style="font-size: 1.3em; font-weight: 700;"><%= database.name %></h4>
+                            <h4 style="font-size: 1.3em; font-weight: 700;"><a href="<%= database.appealLink %>" target="_blank"><%= database.name %></a></h4>
                         </div>
                         <div class="hiddenHr">
                             <hr>
