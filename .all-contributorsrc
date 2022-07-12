@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "zedofficial",
+      "name": "ZED Official",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61573331?v=4",
+      "profile": "https://zedofficial.xyz/",
+      "contributions": [
+        "tool"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "firewallgg",
+  "projectOwner": "Itz-Hyperz",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
