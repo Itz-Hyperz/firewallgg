@@ -40,6 +40,16 @@
         "tool",
         "bug"
       ]
+    },
+    {
+      "login": "zedofficial",
+      "name": "ZED Official",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61573331?v=4",
+      "profile": "https://zedofficial.xyz/",
+      "contributions": [
+        "ideas",
+        "tool"
+      ]
     }
   ],
   "files": [
