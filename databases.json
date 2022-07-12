@@ -6,6 +6,7 @@
     "active": true,
     "requestUrl": "https://bans.hyperz.net/firewallgg/checkuser/",
     "method": "get",
+    "appealLink": "https://store.hyperz.net/discord",
     "otherData": {}
   },
   {
@@ -15,6 +16,7 @@
     "active": true,
     "requestUrl": "https://stoptheresellers.com/api/v1/checkUser/",
     "method": "get",
+    "appealLink": "https://stoptheresellers.com",
     "otherData": {}
   },
   {
@@ -24,6 +26,7 @@
     "active": true,
     "requestUrl": "https://api.strongertogether.network/v2/getuser/",
     "method": "get",
+    "appealLink": "https://strongertogether.network",
     "otherData": {}
   },
   {
@@ -33,6 +36,7 @@
     "active": true,
     "requestUrl": "https://bandb.xolify.store/firewallgg/checkuser/",
     "method": "get",
+    "appealLink": "https://bandb.xolify.store",
     "otherData": {}
   },
   {
@@ -42,6 +46,7 @@
     "active": false,
     "requestUrl": "https://diligentdefense.xyz/firewallgg/checkuser/",
     "method": "get",
+    "appealLink": "https://discord.gg/GfRZENxZH9",
     "otherData": {}
   },
   {
@@ -51,6 +56,7 @@
     "active": true,
     "requestUrl": "https://clover-shield.wintersystems.tech/firewallgg/checkuser/",
     "method": "get",
+    "appealLink": "https://clover-shield.wintersystems.tech",
     "otherData": {}
   }
 ]
