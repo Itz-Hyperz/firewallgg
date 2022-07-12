@@ -49,7 +49,6 @@ app.get('/account', backend.checkAuth, async function(req, res) {
 
 app.get('/search/:userid', async function(req, res) {
     if(!req?.params?.userid) return res.redirect('/');
-
     let bannedList = await firewallgg(req.params.userid);
     res.render('search.ejs', { loggedIn: req.isAuthenticated(), bannedList: bannedList, searchId: req.params.userid });
 });
