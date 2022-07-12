@@ -5,6 +5,7 @@ const app = express();
 const chalk = require('chalk');
 const axios = require('axios');
 const firewallgg = require("firewallgg");
+const fs = require('fs');
 
 // Backend Initialization
 const backend = require('./backend.js');
@@ -12,6 +13,7 @@ backend.init(app);
 
 // Discord Login Passport
 const passport = require('passport');
+const { fstat } = require("fs");
 const DiscordStrategy = require('passport-discord-faxes').Strategy;
 passport.serializeUser(function(user, done) { done(null, user) });
 passport.deserializeUser(function(obj, done) { done(null, obj) });
@@ -49,6 +51,7 @@ app.get('/account', backend.checkAuth, async function(req, res) {
 
 app.get('/search/:userid', async function(req, res) {
     if(!req?.params?.userid) return res.redirect('/');
+
     let bannedList = await firewallgg(req.params.userid);
     res.render('search.ejs', { loggedIn: req.isAuthenticated(), bannedList: bannedList, searchId: req.params.userid });
 });
@@ -82,7 +85,7 @@ app.get('/api/checkuser/:userid', async function(req, res) {
                 if(database.active) {
                     let themeColor = database.themeColor || '#FFFFFF';
                     let logoUrl = database.logoUrl || 'https://firewall.gg/assets/logo.png';
-                    let data = await makeRequest(database, userId)
+                    let data = await makeRequest(database, userId);
                     let _json = "STRING";
                     if(Array.isArray(data)) {
                         // Stronger Together Array Check
@@ -115,15 +118,13 @@ app.get('/api/checkuser/:userid', async function(req, res) {
                             "time": data?.time || 'NA',
                             "otherData": database.otherData || {}
                         };
+                        bans.push(_json);
                     };
-                    if(typeof _json == 'object') {
-                        await bans.push(_json);
-                    };
-                    if(count >= databases.length) {
-                        check = true
-                    } else {
-                        check = false;
-                    };
+                };
+                if(count >= databases.length) {
+                    check = true
+                } else {
+                    check = false;
                 };
             };
             while(check == true) {
@@ -154,21 +155,24 @@ console.log(chalk.blue('FirewallGG Started on Port ' + config.port));
 
 // Functions
 async function makeRequest(database, userId) {
-    let request;
-    try {
-        request = await axios({
-            method: database.method,
-            url: `${database.requestUrl}${userId}`,
-            headers: {
-                'Authorization': `Bearer r1O.CJZ9LVtLKEs2ocpZ0sR1C3436H`
+    let request = await axios({
+        method: database.method,
+        url: `${database.requestUrl}${userId}`,
+        headers: {
+            'Authorization': `Bearer r1O.CJZ9LVtLKEs2ocpZ0sR1C3436H`
+        }
+    }).catch(async function (error) {
+        return "failed";
+    });
+    if(request == "failed") {
+        let obj = {
+            "active": false,
+            "blacklistdata": {
+                "blacklisted": false
             }
-        });
-    } catch(e) {
-        if(e.toString().includes('Request failed')) {
-            request = "failed";
         };
-    };
-    if(request != "failed") {
+        return obj;
+    } else {
         if(!request?.data) return;
         return request.data;
     };
