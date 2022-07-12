@@ -38,7 +38,7 @@
                     <% databases.forEach(function(database) { %>
                         <div class="col-sm-2">
                             <img  style="height: 10em; width: 10em; margin-bottom: 1em;" src="<%= database.logoUrl %>">
-                            <h4 style="font-size: 1.3em; font-weight: 700;"><a href="<%= database.appealLink %>" target="_blank"><%= database.name %></a></h4>
+                            <h4 style="font-size: 1.3em; font-weight: 700; margin-bottom: 1em;"><a href="<%= database.appealLink %>" target="_blank"><%= database.name %></a></h4>
                         </div>
                         <div class="hiddenHr">
                             <hr>
@@ -54,14 +54,35 @@
         <div class="container text-white text-center bg-dark" style="border-radius: 1em;">
             <br>
             <h1 style="font-weight: 700;">Affiliated Services</h1>
-            <p>Below we have all of our primary affiliated services and partners.</p>
+            <p>Below you will find our integrated services and affiliates.</p>
             <br>
             <div class="container">
                 <div class="row justify-content-center align-items-center text-center">
                     <% partners.forEach(function(partner) { %>
                         <div class="col-sm-2">
                             <img  style="height: 10em; width: 10em; margin-bottom: 1em;" src="<%= partner.logo %>">
-                            <h4 style="font-weight: 700;"><a href="<%= partner.url %>" target="_blank"><%= partner.name %></a></h4>
+                            <h4 style="font-weight: 700; margin-bottom: 1em;"><a href="<%= partner.url %>" target="_blank"><%= partner.name %></a></h4>
+                        </div>
+                        <div class="hiddenHr">
+                            <hr>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+            <br>
+        </div>
+        <br>
+        <div class="container text-white text-center bg-dark" style="border-radius: 1em;">
+            <br>
+            <h1 style="font-weight: 700;">Project Contributors</h1>
+            <p>View all of our <a href="https://github.com/itz-hyperz/firewallgg" target="_blank">project contributors</a> below!</p>
+            <br>
+            <div class="container">
+                <div class="row justify-content-center align-items-center text-center">
+                    <% contributors.forEach(function(user) { %>
+                        <div class="col-sm-3">
+                            <img  style="height: 10em; width: 10em; margin-bottom: 1em; border-radius: 50%;" src="<%= user.avatar_url %>">
+                            <h4 style="font-weight: 700; margin-bottom: 1em;"><a href="<%= user.profile %>" target="_blank"><%= user.name || user.login %></a></h4>
                         </div>
                         <div class="hiddenHr">
                             <hr>
