@@ -41,9 +41,17 @@
                                     <% if(!ban.proof.includes('http')) { %>
                                         <button class="btn banProofButton" href="#" style="background-color: #2b2b2b;" onclick="noProofAlert(`<%= ban.database %>`)"><%= ban.proof %></button>
                                     <% } else { %>
-                                        <a class="btn banProofButton" href="<%= ban.proof %>" target="_blank" style="background-color: <%= ban.themeColor %>">View</a>
+                                        <% if(ban.themeColor.toLowerCase() == "#ffffff") { %>
+                                            <a class="btn banProofButton" href="<%= ban.proof %>" target="_blank" style="background-color: <%= ban.themeColor %>; color: black; border-color: #002369;">View</a>
+                                        <% } else { %>
+                                            <a class="btn banProofButton" href="<%= ban.proof %>" target="_blank" style="background-color: <%= ban.themeColor %>;">View</a>
+                                        <% }; %>
                                     <% }; %>
-                                    <a class="btn banProofButton" href="<%= ban.appealLink %>" target="_blank" style="background-color: <%= ban.themeColor %>">Appeal</a>
+                                    <% if(ban.themeColor.toLowerCase() == "#ffffff") { %>
+                                        <a class="btn banProofButton" href="<%= ban.appealLink %>" target="_blank" style="background-color: <%= ban.themeColor %>; color: black; border-color: #002369;">Appeal</a>
+                                    <% } else { %>
+                                        <a class="btn banProofButton" href="<%= ban.appealLink %>" target="_blank" style="background-color: <%= ban.themeColor %>;">Appeal</a>
+                                    <% }; %>
                                 </p>
                                 <p class="banTime"><span style="font-weight: 700;">Time:</span> <%= ban.time %></p>
                             </div>
