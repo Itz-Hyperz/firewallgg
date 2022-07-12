@@ -10,11 +10,10 @@ This is technically the second version of FirewallGG. Originally it was created 
 FirewallGG is **both** *client sided* and *server sided*. What this means is users on any platform can now use FirewallGG to it's fullest capabilities. From a backend database background check on users, to a website for ease of access anywhere, all the way out to a desktop process that will allow you to run user Ids and get a return on them easily.
 
 ## Step One - Pick a method
-First, you need to find out just which method will best suit your needs for using FirewallGG. If you're just trying to check a users background history, maybe just the website or the desktop process will be enough for you, but if you're looking for something a little more backend wise, possibly the [Node Module](https://npmjs.com/package/firewallgg) will be more your style. If none of these suit your needs, you can always just use our REST API [here](https://firewall.hyperz.net/api).
+First, you need to find out just which method will best suit your needs for using FirewallGG. If you're just trying to check a users background history, maybe just the website will be enough for you, but if you're looking for something a little more backend wise, possibly the [Node Module](https://npmjs.com/package/firewallgg) will be more your style. If none of these suit your needs, you can always just use our REST API [here](https://firewall.hyperz.net/api).
 
 So again, your options are:
 - The [Website](https://firewall.hyperz.net).
-- The [Desktop Process](https://github.com/Itz-Hyperz/firewallgg/releases).
 - The [Node Module](https://npmjs.com/package/firewallgg)
 - The [Web API](https://firewall.hyperz.net/api).
 
