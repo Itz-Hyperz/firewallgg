@@ -1,4 +1,7 @@
 # FirewallGG
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 <img align="right" height="60" width="60" alt="" src="https://github.com/Itz-Hyperz/firewallgg/blob/main/website/public/assets/logo.png?raw=true" />
 
 This is technically the second version of FirewallGG. Originally it was created with the same intention, however it never succeeded and required many rewrites. Now, it has been rewritten in a more stable fashion with better intentions towards serving the community. FirewallGG is a *background-checking* tool. What it will allow you to do, is check a user's Discord Id and see if they are banned in any databases that are synced within the Firewall. This allows you to mass check databases with almost no hassle at all. Just a simple setup and you will be all good to go! 
@@ -36,3 +39,23 @@ Below is what gets returned from the physical API and you need to build your API
 ```
 
 Upon creating a pull request to add to the [`databases.json`](https://github.com/Itz-Hyperz/firewallgg/blob/main/databases.json) file, you will *also* need to provide a screenshot of what *exactly* gets returned from that API endpoint on your end, this way developers can verify that these data types are correct with no excess-hassle.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://hyperz.net"><img src="https://avatars.githubusercontent.com/u/69090660?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Itz-Hyperz</b></sub></a><br /><a href="https://github.com/Itz-Hyperz/firewallgg/issues?q=author%3AItz-Hyperz" title="Bug reports">🐛</a> <a href="#business-Itz-Hyperz" title="Business development">💼</a> <a href="https://github.com/Itz-Hyperz/firewallgg/commits?author=Itz-Hyperz" title="Code">💻</a> <a href="https://github.com/Itz-Hyperz/firewallgg/commits?author=Itz-Hyperz" title="Documentation">📖</a> <a href="#security-Itz-Hyperz" title="Security">🛡️</a> <a href="https://github.com/Itz-Hyperz/firewallgg/pulls?q=is%3Apr+reviewed-by%3AItz-Hyperz" title="Reviewed Pull Requests">👀</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
