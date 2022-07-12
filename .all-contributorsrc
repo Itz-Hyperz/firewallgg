@@ -1,5 +1,5 @@
 {
-  "badgeTemplate": "",
+  "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-blue.svg?style=flat-square)](#contributors)",
   "projectName": "firewallgg",
   "projectOwner": "Itz-Hyperz",
   "repoType": "github",
