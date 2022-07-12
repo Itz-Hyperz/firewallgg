@@ -37,9 +37,14 @@ app.get('', async function(req, res) {
         method: 'get',
         url: 'https://raw.githubusercontent.com/Itz-Hyperz/firewallgg/main/partners.json'
     });
+    let contribRequest = await axios({
+        method: 'get',
+        url: 'https://raw.githubusercontent.com/Itz-Hyperz/firewallgg/main/.all-contributorsrc'
+    });
     let databases = request?.data;
     let partners = integs?.data;
-    res.render('index.ejs', { loggedIn: req.isAuthenticated(), databases: databases, partners: partners });
+    let contributors = contribRequest?.data?.contributors;
+    res.render('index.ejs', { loggedIn: req.isAuthenticated(), databases: databases, partners: partners, contributors: contributors });
 });
 
 app.get('/account', backend.checkAuth, async function(req, res) {
