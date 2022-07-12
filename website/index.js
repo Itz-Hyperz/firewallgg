@@ -5,7 +5,6 @@ const app = express();
 const chalk = require('chalk');
 const axios = require('axios');
 const firewallgg = require("firewallgg");
-const fs = require('fs');
 
 // Backend Initialization
 const backend = require('./backend.js');
@@ -13,7 +12,6 @@ backend.init(app);
 
 // Discord Login Passport
 const passport = require('passport');
-const { fstat } = require("fs");
 const DiscordStrategy = require('passport-discord-faxes').Strategy;
 passport.serializeUser(function(user, done) { done(null, user) });
 passport.deserializeUser(function(obj, done) { done(null, obj) });
@@ -84,7 +82,8 @@ app.get('/api/checkuser/:userid', async function(req, res) {
                 count++
                 if(database.active) {
                     let themeColor = database.themeColor || '#FFFFFF';
-                    let logoUrl = database.logoUrl || 'https://firewall.gg/assets/logo.png';
+                    let logoUrl = database.logoUrl || 'https://firewall.hyperz.net/assets/logo.png';
+                    let appealLink = database.appealLink || '#';
                     let data = await makeRequest(database, userId);
                     let _json = "STRING";
                     if(Array.isArray(data)) {
@@ -111,6 +110,7 @@ app.get('/api/checkuser/:userid', async function(req, res) {
                             "database": database.name,
                             "themeColor": themeColor,
                             "logoUrl": logoUrl,
+                            "appealLink": appealLink,
                             "active": data?.active,
                             "userid": data?.userid || 'NA',
                             "reason": data?.reason || 'NA',
