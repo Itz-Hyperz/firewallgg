@@ -1,3 +1,28 @@
 {
-  "badgeTemplate": ""
+  "badgeTemplate": "",
+  "projectName": "firewallgg",
+  "projectOwner": "Itz-Hyperz",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true,
+  "contributors": [
+    {
+      "login": "Itz-Hyperz",
+      "name": "Itz-Hyperz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/69090660?v=4",
+      "profile": "https://hyperz.net",
+      "contributions": [
+        "bug",
+        "business",
+        "code",
+        "doc",
+        "security",
+        "review"
+      ]
+    }
+  ],
+  "files": [
+    "README.md"
+  ],
+  "contributorsPerLine": 7
 }
