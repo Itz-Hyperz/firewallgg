@@ -38,8 +38,12 @@
                                 <p class="banActive"><span style="font-weight: 700;">Active:</span> <%= ban.active %></p>
                                 <p class="banReason"><span style="font-weight: 700;">Reason:</span> <%= ban.reason %></p>
                                 <p class="banProof"><span style="font-weight: 700;">Evidence:</span><br>
-                                    <% if(!ban.proof.includes('http')) %>
-                                    <a class="btn banProofButton" href="<%= ban.proof %>" target="_blank" style="background-color: <%= ban.themeColor %>">View</a>
+                                    <% if(!ban.proof.includes('http')) { %>
+                                        <button class="btn banProofButton" href="#" style="background-color: #2b2b2b;" onclick="noProofAlert(`<%= ban.database %>`)"><%= ban.proof %></button>
+                                    <% } else { %>
+                                        <a class="btn banProofButton" href="<%= ban.proof %>" target="_blank" style="background-color: <%= ban.themeColor %>">View</a>
+                                    <% }; %>
+                                    <a class="btn banProofButton" href="<%= ban.appealLink %>" target="_blank" style="background-color: <%= ban.themeColor %>">Appeal</a>
                                 </p>
                                 <p class="banTime"><span style="font-weight: 700;">Time:</span> <%= ban.time %></p>
                             </div>
@@ -57,5 +61,10 @@
             <br>
         </div>
         <%- include('_footer') %>
+        <script>
+            function noProofAlert(database) {
+                alert(`${database} did not provide any public proof in their ban against this user.`);
+            }
+        </script>
     </body>
 </html>
