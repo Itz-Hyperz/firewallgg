@@ -1,6 +1,6 @@
 # FirewallGG
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <img align="right" height="60" width="60" alt="" src="https://github.com/Itz-Hyperz/firewallgg/blob/main/website/public/assets/logo.png?raw=true" />
 
@@ -50,6 +50,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://hyperz.net"><img src="https://avatars.githubusercontent.com/u/69090660?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Itz-Hyperz</b></sub></a><br /><a href="https://github.com/Itz-Hyperz/firewallgg/issues?q=author%3AItz-Hyperz" title="Bug reports">🐛</a> <a href="#business-Itz-Hyperz" title="Business development">💼</a> <a href="https://github.com/Itz-Hyperz/firewallgg/commits?author=Itz-Hyperz" title="Code">💻</a> <a href="https://github.com/Itz-Hyperz/firewallgg/commits?author=Itz-Hyperz" title="Documentation">📖</a> <a href="#security-Itz-Hyperz" title="Security">🛡️</a> <a href="https://github.com/Itz-Hyperz/firewallgg/pulls?q=is%3Apr+reviewed-by%3AItz-Hyperz" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://xolify.store/"><img src="https://avatars.githubusercontent.com/u/103285682?v=4?s=100" width="100px;" alt=""/><br /><sub><b>XolifyDev</b></sub></a><br /><a href="#ideas-XolifyDev" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-XolifyDev" title="Tools">🔧</a></td>
   </tr>
 </table>
 
