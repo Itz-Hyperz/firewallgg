@@ -160,6 +160,10 @@ pre code {
     border-color: rgba(255, 255, 255, 0) !important;
 }
 
+.banReason, .banTime {
+    word-wrap: break-word;
+}
+
 /* Scrollbar */
 /* width */
 ::-webkit-scrollbar {
@@ -197,6 +201,7 @@ pre code {
     }
     .dbInfos {
         text-align: center;
+        width: 100%;
     }
     .banTitle {
         font-size: 1em;
