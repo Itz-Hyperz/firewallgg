@@ -37,7 +37,7 @@
                 <div class="row justify-content-center align-items-center text-center">
                     <% databases.forEach(function(database) { %>
                         <div class="col-sm-2">
-                            <img  style="height: 10em; width: 10em; margin-bottom: 1em;" src="<%= database.logoUrl %>">
+                            <img  style="height: 10em; width: 10em; margin-bottom: 1em; border-radius: 1em;" src="<%= database.logoUrl %>">
                             <h4 style="font-size: 1.3em; font-weight: 700; margin-bottom: 1em;"><a href="<%= database.appealLink %>" target="_blank"><%= database.name %></a></h4>
                         </div>
                         <div class="hiddenHr">
@@ -60,7 +60,7 @@
                 <div class="row justify-content-center align-items-center text-center">
                     <% partners.forEach(function(partner) { %>
                         <div class="col-sm-2">
-                            <img  style="height: 10em; width: 10em; margin-bottom: 1em;" src="<%= partner.logo %>">
+                            <img  style="height: 10em; width: 10em; margin-bottom: 1em; border-radius: 1em;" src="<%= partner.logo %>">
                             <h4 style="font-weight: 700; margin-bottom: 1em;"><a href="<%= partner.url %>" target="_blank"><%= partner.name %></a></h4>
                         </div>
                         <div class="hiddenHr">
