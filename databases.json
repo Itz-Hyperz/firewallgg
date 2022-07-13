@@ -62,7 +62,7 @@
   {
     "name": "LeakGuard",
     "themeColor": "#009CFE",
-    "logoUrl": "https://cdn.hyperz.net/u/main/jF7Y756.png",
+    "logoUrl": "https://cdn.hyperz.net/u/main/qYD0eMD.png",
     "active": true,
     "requestUrl": "http://158.69.145.132:3000/firewallgg/checkuser/",
     "method": "get",
