@@ -58,5 +58,15 @@
     "method": "get",
     "appealLink": "https://clover-shield.wintersystems.tech",
     "otherData": {}
+  },
+  {
+    "name": "LeakGuard",
+    "themeColor": "#009CFE",
+    "logoUrl": "https://cdn.hyperz.net/u/main/jF7Y756.png",
+    "active": true,
+    "requestUrl": "http://158.69.145.132:3000/firewallgg/checkuser/",
+    "method": "get",
+    "appealLink": "https://leakguard.net",
+    "otherData": {}
   }
 ]
