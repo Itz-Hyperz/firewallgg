@@ -25,8 +25,25 @@ On the other hand, integrating it into your system may be a little bit more diff
 Yet, if you are entirely on your own, feel free to reference our public documentation for our Node Module [here](https://npmjs.com/package/firewallgg) or for our Web API you can look [here](https://firewall.hyperz.net/api).
 
 ## API Object Structure
-Below is what gets returned from the physical API and you need to build your API endpoint to return a JSON object with these values as the *only returning values*.
+Below is what gets returned from the physical API:
+```json
+[
+    {
+        "database": "DATABASE_NAME",
+        "themeColor": "DATABASE_THEME_COLOR",
+        "logoUrl": "DATABASE_LOGO_URL",
+        "appealLink": "DATABASE_APPEAL_LINK",
+        "active": true,
+        "userid": "BANNED_USER_ID",
+        "reason": "BANNED_USER_REASON",
+        "proof": "BANNED_USER_PROOF",
+        "time": "TIME_OF_BAN",
+        "otherData": {}
+    }
+]
+```
 
+You need to build your API endpoint to return a JSON object with these values as the *only returning values*.
 ```json
 {
   "active": yourObject.active,
