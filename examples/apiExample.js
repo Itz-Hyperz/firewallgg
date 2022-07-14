@@ -1,4 +1,5 @@
 // This example was made for Node.JS
+// This works out of the box with Hyperz Ban Database!
 
 /*
     JSON KEYS MUST STAY THE SAME AS BELOW
