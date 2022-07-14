@@ -47,8 +47,9 @@
                                             <a class="btn banProofButton" href="<%= ban.proof %>" target="_blank" style="background-color: <%= ban.themeColor %>;">View</a>
                                         <% }; %>
                                     <% }; %>
+                                    <p class="banProof"><span style="font-weight: 700;">Appeal:</span><br>
                                     <% if(ban.themeColor.toLowerCase() == "#ffffff") { %>
-                                        <a class="btn banProofButton" href="<%= ban.appealLink %>" target="_blank" style="background-color: <%= ban.themeColor %>; color: black; border-color: #002369;">Appeal</a>
+                                        <a class="btn banProofButton" href="<%= ban.appealLink %>" target="_blank" style="background-color: <%= ban.themeColor %>; color: black; border-color: #002369; font-size: 0.8em; ">Appeal</a>
                                     <% } else { %>
                                         <a class="btn banProofButton" href="<%= ban.appealLink %>" target="_blank" style="background-color: <%= ban.themeColor %>;">Appeal</a>
                                     <% }; %>
