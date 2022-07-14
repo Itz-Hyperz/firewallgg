@@ -1,6 +1,6 @@
 # FirewallGG
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-blue.svg)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-blue.svg)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <img align="right" height="60" width="60" alt="" src="https://github.com/Itz-Hyperz/firewallgg/blob/main/website/public/assets/logo.png?raw=true" />
 
@@ -53,6 +53,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/sandwichthedev"><img src="https://avatars.githubusercontent.com/u/69737561?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sandwichthedev</b></sub></a><br /><a href="#ideas-sandwichthedev" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-sandwichthedev" title="Tools">🔧</a> <a href="https://github.com/Itz-Hyperz/firewallgg/issues?q=author%3Asandwichthedev" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://zedofficial.xyz/"><img src="https://avatars.githubusercontent.com/u/61573331?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ZED Official</b></sub></a><br /><a href="#ideas-zedofficial" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-zedofficial" title="Tools">🔧</a></td>
     <td align="center"><a href="https://github.com/LouDawg2"><img src="https://avatars.githubusercontent.com/u/66086177?v=4?s=100" width="100px;" alt=""/><br /><sub><b>LouDawg</b></sub></a><br /><a href="#tool-LouDawg2" title="Tools">🔧</a> <a href="#ideas-LouDawg2" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://store.shawnengmann.com/"><img src="https://avatars.githubusercontent.com/u/86177860?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shawn E.</b></sub></a><br /><a href="#design-Shawn-E" title="Design">🎨</a> <a href="#ideas-Shawn-E" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
