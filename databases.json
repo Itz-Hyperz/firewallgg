@@ -68,5 +68,16 @@
     "method": "get",
     "appealLink": "https://leakguard.net",
     "otherData": {}
+  },
+  {
+    "name": "Sentinel",
+    "themeColor": "#fc7a02",
+    "logoUrl": "https://cdn.hyperz.net/u/main/vSISoFR.jpg",
+    "active": true,
+    "requestUrl": "https://sentinelbot.xyz/firewallgg/checkuser/",
+    "method": "get",
+    "appealLink": "https://discord.gg/W2CKcARPxF",
+    "otherData": {}
   }
+
 ]
