@@ -79,14 +79,14 @@
     "appealLink": "https://sentinelbot.xyz/appeal",
     "otherData": {}
   },
-{
+  {
     "name": "StrongGuard",
-    "themeColor": "#fc7a02",
+    "themeColor": "#fc1f02",
     "logoUrl": "https://avatars.githubusercontent.com/u/104229324?s=280&v=4",
     "active": true,
     "requestUrl": "https://strongguard.net/firewallgg/checkuser/",
     "method": "get",
     "appealLink": "https://strongguard.net/appeal",
     "otherData": {}
- }
+  }
 ]
