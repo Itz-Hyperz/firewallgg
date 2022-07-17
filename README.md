@@ -1,6 +1,6 @@
 # FirewallGG
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-blue.svg)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-blue.svg)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <img align="right" height="60" width="60" alt="" src="https://github.com/Itz-Hyperz/firewallgg/blob/main/website/public/assets/logo.png?raw=true" />
 
@@ -72,6 +72,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/LouDawg2"><img src="https://avatars.githubusercontent.com/u/66086177?v=4?s=100" width="100px;" alt=""/><br /><sub><b>LouDawg</b></sub></a><br /><a href="#tool-LouDawg2" title="Tools">🔧</a> <a href="#ideas-LouDawg2" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://store.shawnengmann.com/"><img src="https://avatars.githubusercontent.com/u/86177860?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shawn E.</b></sub></a><br /><a href="#design-Shawn-E" title="Design">🎨</a> <a href="#ideas-Shawn-E" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://jordan2139.me"><img src="https://avatars.githubusercontent.com/u/65438497?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jordan.#2139</b></sub></a><br /><a href="#ideas-Jordan2139" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-Jordan2139" title="Tools">🔧</a> <a href="#infra-Jordan2139" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://novacustoms.com"><img src="https://avatars.githubusercontent.com/u/97416193?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nova Customs Inc </b></sub></a><br /><a href="#tool-NovaCustoms" title="Tools">🔧</a> <a href="#ideas-NovaCustoms" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
