@@ -81,6 +81,16 @@
         "tool",
         "infra"
       ]
+    },
+    {
+      "login": "NovaCustoms",
+      "name": "Nova Customs Inc ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97416193?v=4",
+      "profile": "https://novacustoms.com",
+      "contributions": [
+        "tool",
+        "ideas"
+      ]
     }
   ],
   "files": [
