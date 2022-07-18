@@ -88,5 +88,14 @@
     "method": "get",
     "appealLink": "https://strongguard.net/appeal",
     "otherData": {}
+  },
+    "name": "SantuaryGuard",
+    "themeColor": "#C43737",
+    "logoUrl": "https://i.imgur.com/FT03zYJ.png",
+    "active": true,
+    "requestUrl": "https://sanctuaryguard.xyz/firewallgg/checkuser/",
+    "method": "get",
+    "appealLink": "https://sanctuaryguard.xyz/appeal",
+    "otherData": {}
   }
 ]
