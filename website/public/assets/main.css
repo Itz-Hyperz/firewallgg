@@ -10,7 +10,7 @@ body {
     height:100%;
     margin: auto;
     padding: 0;
-    background-color: rgb(1,8,26);
+    background-color: #060F27;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -22,11 +22,11 @@ body {
 }
 
 .bg-dark {
-    background-color: #000f2e !important;
+    background-color: #172144 !important;
 }
 
 .bg-secondary {
-    background-color: #01081a !important;
+    background-color: #060F27 !important;
 }
 
 .navbar-toggler {
