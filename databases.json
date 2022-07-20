@@ -99,4 +99,14 @@
     "appealLink": "https://sanctuaryguard.xyz/appeal",
     "otherData": {}
   }
+   {
+    "name": "Protect The Servers",
+    "themeColor": "#FEFE00",
+    "logoUrl": "https://protecttheservers.co/assets/logo.png",
+    "active": true,
+    "requestUrl": "https://protecttheservers.co/firewallgg/checkuser/",
+    "method": "get",
+    "appealLink": "https://protecttheservers.co/appeal",
+    "otherData": {}
+  }
 ]
