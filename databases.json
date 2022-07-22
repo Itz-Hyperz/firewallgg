@@ -9,6 +9,7 @@
     "appealLink": "https://store.hyperz.net/discord",
     "otherData": {}
   },
+  
   {
     "name": "Stop The Resellers",
     "themeColor": "#DB6574",
@@ -107,6 +108,16 @@
     "requestUrl": "https://protecttheservers.co/firewallgg/checkuser/",
     "method": "get",
     "appealLink": "https://protecttheservers.co/appeal",
+    "otherData": {}
+  },
+  {
+    "name": "GG Protection",
+    "themeColor": "#3d8a52",
+    "logoUrl": "https://cdn.gregory-development.online/uploads/ggprotectionlogo.png",
+    "active": true,
+    "requestUrl": "https://ggprotection.xyz/firewallgg/checkuser/",
+    "method": "get",
+    "appealLink": "https://ggprotection.xyz/appeal",
     "otherData": {}
   }
 ]
