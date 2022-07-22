@@ -113,7 +113,7 @@
   {
     "name": "GG Protection",
     "themeColor": "#3d8a52",
-    "logoUrl": "https://cdn.gregory-development.online/uploads/ggprotectionlogo.png",
+    "logoUrl": "https://cdn.hyperz.net/u/main/2q3RqCD.png",
     "active": true,
     "requestUrl": "https://ggprotection.xyz/firewallgg/checkuser/",
     "method": "get",
