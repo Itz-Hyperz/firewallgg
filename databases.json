@@ -9,7 +9,6 @@
     "appealLink": "https://store.hyperz.net/discord",
     "otherData": {}
   },
-  
   {
     "name": "Stop The Resellers",
     "themeColor": "#DB6574",
@@ -118,6 +117,16 @@
     "requestUrl": "https://ggprotection.xyz/firewallgg/checkuser/",
     "method": "get",
     "appealLink": "https://ggprotection.xyz/appeal",
+    "otherData": {}
+  },
+  {
+    "name": "Plux Guard",
+    "themeColor": "#ff0000",
+    "logoUrl": "https://i.imgur.com/l1bhMtQ.png",
+    "active": true,
+    "requestUrl": "http://157.90.218.211:2004/bans/",
+    "method": "get",
+    "appealLink": "https://discord.gg/GFqXkecwp8",
     "otherData": {}
   }
 ]
