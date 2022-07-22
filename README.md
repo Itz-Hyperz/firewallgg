@@ -1,6 +1,6 @@
 # FirewallGG
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-10-blue.svg)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-11-blue.svg)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <img align="right" height="60" width="60" alt="" src="https://github.com/Itz-Hyperz/firewallgg/blob/main/website/public/assets/logo.png?raw=true" />
 
@@ -81,6 +81,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://novacustoms.com"><img src="https://avatars.githubusercontent.com/u/97416193?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nova Customs Inc </b></sub></a><br /><a href="#tool-NovaCustoms" title="Tools">🔧</a> <a href="#ideas-NovaCustoms" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://fusions.world"><img src="https://avatars.githubusercontent.com/u/89275160?v=4?s=100" width="100px;" alt=""/><br /><sub><b>FusionsWorld</b></sub></a><br /><a href="#ideas-FusionsWorld" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-FusionsWorld" title="Tools">🔧</a></td>
     <td align="center"><a href="https://github.com/PattysDevelopment"><img src="https://avatars.githubusercontent.com/u/88861117?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Patrick Calcote</b></sub></a><br /><a href="#ideas-PattysDevelopment" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-PattysDevelopment" title="Tools">🔧</a></td>
+    <td align="center"><a href="https://github.com/Chris-Newton2000"><img src="https://avatars.githubusercontent.com/u/95302476?v=4?s=100" width="100px;" alt=""/><br /><sub><b>GregoryDev</b></sub></a><br /><a href="#ideas-Chris-Newton2000" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-Chris-Newton2000" title="Tools">🔧</a></td>
   </tr>
 </table>
 
