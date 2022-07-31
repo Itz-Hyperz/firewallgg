@@ -129,5 +129,15 @@
     "method": "get",
     "appealLink": "https://discord.gg/GFqXkecwp8",
     "otherData": {}
+  },
+    {
+    "name": "Infinity Guard",
+    "themeColor": "#2c59d9",
+    "logoUrl": "https://firemodifications.com/i/QU9Di.png",
+    "active": true,
+    "requestUrl": "https://bandb.firemodifications.com/firewallgg/checkuser/",
+    "method": "get",
+    "appealLink": "https://bandb.firemodifications.com/appeal",
+    "otherData": {}
   }
 ]
