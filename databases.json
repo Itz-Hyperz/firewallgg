@@ -1,73 +1,83 @@
 [
-  {
-    "name": "HD | Blacklists",
-    "themeColor": "#144B9D",
-    "logoUrl": "https://cdn.hyperz.net/u/main/vJohEi4.png",
-    "active": true,
-    "requestUrl": "https://bans.hyperz.net/firewallgg/checkuser/",
-    "method": "get",
-    "appealLink": "https://store.hyperz.net/discord",
-    "otherData": {}
-  },
-  
-  {
-    "name": "Stop The Resellers",
-    "themeColor": "#DB6574",
-    "logoUrl": "https://stoptheresellers.com/assets/images/logo.png",
-    "active": true,
-    "requestUrl": "https://stoptheresellers.com/api/v1/checkUser/",
-    "method": "get",
-    "appealLink": "https://stoptheresellers.com",
-    "otherData": {}
-  },
-  {
-    "name": "StrongerTogether",
-    "themeColor": "#FE3A06",
-    "logoUrl": "https://strongertogether.network/assets/logo.png",
-    "active": true,
-    "requestUrl": "https://api.strongertogether.network/firewallgg/checkuser/",
-    "method": "get",
-    "appealLink": "https://strongertogether.network",
-    "otherData": {}
-  },
-  {
-    "name": "Xolify BanDB",
-    "themeColor": "#ffffff",
-    "logoUrl": "https://cdn.hyperz.net/u/xolify/5iYxLSp.png",
-    "active": true,
-    "requestUrl": "https://bandb.xolify.store/firewallgg/checkuser/",
-    "method": "get",
-    "appealLink": "https://bandb.xolify.store",
-    "otherData": {}
-  },
-  {
-    "name": "LeakGuard",
-    "themeColor": "#009CFE",
-    "logoUrl": "https://cdn.hyperz.net/u/main/qYD0eMD.png",
-    "active": true,
-    "requestUrl": "http://158.69.145.132:3000/firewallgg/checkuser/",
-    "method": "get",
-    "appealLink": "https://leakguard.net",
-    "otherData": {}
-  },
-  {
-    "name": "Sentinel",
-    "themeColor": "#fc7a02",
-    "logoUrl": "https://cdn.hyperz.net/u/main/vSISoFR.jpg",
-    "active": true,
-    "requestUrl": "https://sentinelbot.xyz/firewallgg/checkuser/",
-    "method": "get",
-    "appealLink": "https://sentinelbot.xyz/appeal",
-    "otherData": {}
-  },
-  {
-    "name": "GG Protection",
-    "themeColor": "#3d8a52",
-    "logoUrl": "https://cdn.hyperz.net/u/main/2q3RqCD.png",
-    "active": true,
-    "requestUrl": "https://ggprotection.xyz/firewallgg/checkuser/",
-    "method": "get",
-    "appealLink": "https://ggprotection.xyz/appeal",
-    "otherData": {}
-  }
+	{
+		"name": "HD | Blacklists",
+		"themeColor": "#144B9D",
+		"logoUrl": "https://cdn.hyperz.net/u/main/vJohEi4.png",
+		"active": true,
+		"requestUrl": "https://bans.hyperz.net/firewallgg/checkuser/",
+		"method": "get",
+		"appealLink": "https://store.hyperz.net/discord",
+		"otherData": {}
+	},
+
+	{
+		"name": "Stop The Resellers",
+		"themeColor": "#DB6574",
+		"logoUrl": "https://stoptheresellers.com/assets/images/logo.png",
+		"active": true,
+		"requestUrl": "https://stoptheresellers.com/api/v1/checkUser/",
+		"method": "get",
+		"appealLink": "https://stoptheresellers.com",
+		"otherData": {}
+	},
+	{
+		"name": "StrongerTogether",
+		"themeColor": "#FE3A06",
+		"logoUrl": "https://strongertogether.network/assets/logo.png",
+		"active": true,
+		"requestUrl": "https://api.strongertogether.network/firewallgg/checkuser/",
+		"method": "get",
+		"appealLink": "https://strongertogether.network",
+		"otherData": {}
+	},
+	{
+		"name": "Xolify BanDB",
+		"themeColor": "#ffffff",
+		"logoUrl": "https://cdn.hyperz.net/u/xolify/5iYxLSp.png",
+		"active": true,
+		"requestUrl": "https://bandb.xolify.store/firewallgg/checkuser/",
+		"method": "get",
+		"appealLink": "https://bandb.xolify.store",
+		"otherData": {}
+	},
+	{
+		"name": "LeakGuard",
+		"themeColor": "#009CFE",
+		"logoUrl": "https://cdn.hyperz.net/u/main/qYD0eMD.png",
+		"active": true,
+		"requestUrl": "http://158.69.145.132:3000/firewallgg/checkuser/",
+		"method": "get",
+		"appealLink": "https://leakguard.net",
+		"otherData": {}
+	},
+	{
+		"name": "Sentinel",
+		"themeColor": "#fc7a02",
+		"logoUrl": "https://cdn.hyperz.net/u/main/vSISoFR.jpg",
+		"active": true,
+		"requestUrl": "https://sentinelbot.xyz/firewallgg/checkuser/",
+		"method": "get",
+		"appealLink": "https://sentinelbot.xyz/appeal",
+		"otherData": {}
+	},
+	{
+		"name": "GG Protection",
+		"themeColor": "#3d8a52",
+		"logoUrl": "https://cdn.hyperz.net/u/main/2q3RqCD.png",
+		"active": true,
+		"requestUrl": "https://ggprotection.xyz/firewallgg/checkuser/",
+		"method": "get",
+		"appealLink": "https://ggprotection.xyz/appeal",
+		"otherData": {}
+	},
+	{
+		"name": "Global Bans",
+		"themeColor": "#212529",
+		"logoUrl": "https://www.gbans.xyz/static/media/logo.a8758119a29feafd991c.png",
+		"active": true,
+		"requestUrl": "https://globalbansapi.xyz/firewallgg/checkuser/",
+		"method": "get",
+		"appealLink": "https://www.gbans.xyz/discord",
+		"otherData": {}
+	}
 ]
