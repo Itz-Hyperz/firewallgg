@@ -15,6 +15,25 @@
         <%- include('_header') %>
         <div class="container text-white text-center bg-dark" style="border-radius: 1em;">
             <br>
+            <h1 style="font-weight: 700;" class="mb-4"><i class="fa-solid fa-shield-halved"></i> FirewallGG Security</h1>
+            <p class="mx-auto" style="width: 90%;">Welcome to FirewallGG! This is an API middleware that is allowing you to keep your Discord communities, Discord web based services, and much more secure to a new standard! FirewallGG is entirely open source and is accepting contributions right now! We are striving every day to redefine what a safe and secure community is on Discord. Interested in helping the project or contributing? Check out <a href="https://github.com/Itz-Hyperz/firewallgg" target="_blank" style="color: rgb(0, 162, 255);">our GitHub</a> for more information on the project! You can also see <a href="https://hyperz.net/discord" target="_blank" style="color: rgb(0, 162, 255);">our Discord</a> for community news, updates on FirewallGG, new bans that are now in place, and much much more!</p>
+            <br>
+            <div class="row justify-content-center">
+                <div class="col-4 mb-3">
+                    <a class="btn btn-primary homebuttonlol" href="https://hyperz.net/discord" target="_blank"><i class="fa-brands fa-discord"></i> Our Discord</a>
+                </div>
+                <div class="col-4 mb-3">
+                    <a class="btn btn-primary homebuttonlol" href="https://github.com/Itz-Hyperz/firewallgg" target="_blank"><i class="fa-brands fa-github"></i> Our Github</a>
+                </div>
+                <div class="col-4 mb-3">
+                    <a class="btn btn-primary homebuttonlol" href="/api"><i class="fa-solid fa-code-compare"></i> Our Endpoints</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <br>
+        <div class="container text-white text-center bg-dark" style="border-radius: 1em;">
+            <br>
             <h1 style="font-weight: 700;">Search A User Id</h1>
             <p>Use the below search box to search a user Id and return any active bans via our API.</p>
             <br>
@@ -23,7 +42,7 @@
                     <label style="font-weight: 600;" for="userid" class="form-label">Discord User Id</label>
                     <input type="text" class="form-control text-white bg-dark" name="userid" id="userid" placeholder="Input a user Id..." required>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 60%">Search</button>
+                <button type="submit" class="btn btn-primary" style="width: 60%"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
             </form>
             <br>
         </div>
@@ -46,7 +65,7 @@
                     <% }); %>
                 </div>
                 <br>
-                <a class="btn btn-primary" style="width: 100%" href="https://github.com/Itz-Hyperz/firewallgg/blob/main/databases.json" target="_blank">Add A Database</a>
+                <a class="btn btn-primary" style="width: 100%" href="https://github.com/Itz-Hyperz/firewallgg/blob/main/databases.json" target="_blank"><i class="fa-solid fa-plus"></i> Add Your Database</a>
             </div>
             <br>
         </div>
