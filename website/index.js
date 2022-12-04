@@ -158,7 +158,7 @@ async function makeRequest(database, userId) {
     let request = await axios({
         method: database.method,
         url: `${database.requestUrl}${userId}`,
-        timeout: 2000,
+        timeout: 1000,
         headers: {
             'Authorization': `Bearer r1O.CJZ9LVtLKEs2ocpZ0sR1C3436H`,
             'sttauthorizaton': `k.8=ww8jz.:,Z2gQN27{=qYtr#BeLUtmH;,+hk6\-ke]\)>qrwKgD*y[4E:ZAdN[D[vnaQ@6];m}_#{#5t>-E'_^'}%vL.5u.5aJJj8?RPMh,~md;_32#{QA:{P}6?w3!gZY-K,kt"]fJ+yswcJ-t%[j6]!C5pf:}Z'ye$U&'>"#&*.M}}/&'DPA@XP$6TG*?Q'JHYr<Y9bGgSx%_:mgG$m(t;!Eg[&JX%x#J7TBKQ=&J,"t<8VmV6H.^*g5Zs"D`
