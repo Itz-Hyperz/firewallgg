@@ -1,3 +1,7 @@
+/*
+    This file will allow you to post your bans to a channel in the Hyperz Development Discord! Simply execute this post request every time you add a ban to your database.
+*/
+
 const axios = require('axios');
 run();
 
