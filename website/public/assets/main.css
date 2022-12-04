@@ -42,6 +42,15 @@ body {
     display: none;
 }
 
+.censored {
+    filter: blur(5px);
+    transition: filter ease-in-out .2s;
+}
+
+.censored:hover, .censored:focus {
+    filter: blur(0);
+}
+
 a {
     color: white;
     text-decoration: none;
@@ -50,6 +59,10 @@ a {
 
 a:hover {
     color: rgb(0, 162, 255);
+}
+
+.homebuttonlol {
+    width: 90%;
 }
 
 h1, h3 {
@@ -107,6 +120,10 @@ pre code {
 
 .nav-link:hover, .nav-link:focus {
     color: #5865F2;
+}
+
+.btn-primary {
+    background-color: #5865F2 !important;
 }
 
 .form-control {
