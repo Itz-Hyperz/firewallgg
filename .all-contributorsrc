@@ -141,10 +141,21 @@
         "ideas",
         "tool"
       ]
+    },
+    {
+      "login": "IamAdren",
+      "name": "Adren",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35825183?v=4",
+      "profile": "https://github.com/IamAdren",
+      "contributions": [
+        "ideas",
+        "tool"
+      ]
     }
   ],
   "files": [
     "README.md"
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "commitConvention": "angular"
 }
