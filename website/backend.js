@@ -9,6 +9,7 @@ async function init(app) {
     var multerStorage = multer.memoryStorage()
     app.use(multer({ storage: multerStorage }).any());
     app.use(bodyParser.urlencoded({ extended: false }))
+    app.use(express.json());
     app.use(session({
         secret: 'keyboard cat',
         resave: false,
@@ -31,7 +32,18 @@ async function checkAuth(req, res, next) {
     }
 };
 
+async function generateRandom(length) {
+    let result           = '';
+    let characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+};
+
 module.exports = {
     init: init,
-    checkAuth: checkAuth
+    checkAuth: checkAuth,
+    generateRandom: generateRandom
 };
