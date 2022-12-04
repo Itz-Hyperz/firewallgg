@@ -11,7 +11,7 @@ app.listen(client.config.port || 3000)
 app.get('/firewallgg/checkuser/:userid', async function(req, res) {
     res.set('Access-Control-Allow-Origin', '*');
     if(!req?.params?.userid) return res.redirect('/');
-    req.params.userid == req.params.userid.replaceAll('`', '').replaceAll('"', '');
+    req.params.userid = req.params.userid.replaceAll('`', '').replaceAll('"', '');
     await con.query(`SELECT * FROM bans WHERE userid="${req?.params?.userid}" AND active="true"`, async (err, row) => {
         if(err) throw err;
         if(!row[0]) {
