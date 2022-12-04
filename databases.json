@@ -41,16 +41,6 @@
     "otherData": {}
   },
   {
-    "name": "Clover Shield",
-    "themeColor": "#00b521",
-    "logoUrl": "https://media.discordapp.net/attachments/953742922778554460/996190084141420565/clover_logo.png",
-    "active": true,
-    "requestUrl": "https://clover-shield.wintersystems.tech/firewallgg/checkuser/",
-    "method": "get",
-    "appealLink": "https://clover-shield.wintersystems.tech",
-    "otherData": {}
-  },
-  {
     "name": "LeakGuard",
     "themeColor": "#009CFE",
     "logoUrl": "https://cdn.hyperz.net/u/main/qYD0eMD.png",
@@ -68,26 +58,6 @@
     "requestUrl": "https://sentinelbot.xyz/firewallgg/checkuser/",
     "method": "get",
     "appealLink": "https://sentinelbot.xyz/appeal",
-    "otherData": {}
-  },
-  {
-    "name": "StrongGuard",
-    "themeColor": "#fc1f02",
-    "logoUrl": "https://avatars.githubusercontent.com/u/104229324?s=280&v=4",
-    "active": true,
-    "requestUrl": "https://strongguard.net/firewallgg/checkuser/",
-    "method": "get",
-    "appealLink": "https://strongguard.net/appeal",
-    "otherData": {}
-  },
-  {
-    "name": "SantuaryGuard",
-    "themeColor": "#C43737",
-    "logoUrl": "https://i.imgur.com/FT03zYJ.png",
-    "active": true,
-    "requestUrl": "https://sanctuaryguard.xyz/firewallgg/checkuser/",
-    "method": "get",
-    "appealLink": "https://sanctuaryguard.xyz/appeal",
     "otherData": {}
   },
   {
