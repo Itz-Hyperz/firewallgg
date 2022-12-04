@@ -41,16 +41,6 @@
     "otherData": {}
   },
   {
-    "name": "Diligent Defense",
-    "themeColor": "#152653",
-    "logoUrl": "https://media.discordapp.net/attachments/977838666611294259/978239078308929566/DD_-_Diligent_Defense.png",
-    "active": false,
-    "requestUrl": "https://diligentdefense.xyz/firewallgg/checkuser/",
-    "method": "get",
-    "appealLink": "https://discord.gg/GfRZENxZH9",
-    "otherData": {}
-  },
-  {
     "name": "Clover Shield",
     "themeColor": "#00b521",
     "logoUrl": "https://media.discordapp.net/attachments/953742922778554460/996190084141420565/clover_logo.png",
@@ -101,16 +91,6 @@
     "otherData": {}
   },
   {
-    "name": "Protect The Servers",
-    "themeColor": "#FEFE00",
-    "logoUrl": "https://protecttheservers.co/assets/logo.png",
-    "active": true,
-    "requestUrl": "https://protecttheservers.co/firewallgg/checkuser/",
-    "method": "get",
-    "appealLink": "https://protecttheservers.co/appeal",
-    "otherData": {}
-  },
-  {
     "name": "GG Protection",
     "themeColor": "#3d8a52",
     "logoUrl": "https://cdn.hyperz.net/u/main/2q3RqCD.png",
@@ -118,16 +98,6 @@
     "requestUrl": "https://ggprotection.xyz/firewallgg/checkuser/",
     "method": "get",
     "appealLink": "https://ggprotection.xyz/appeal",
-    "otherData": {}
-  },
-  {
-    "name": "Infinity Guard",
-    "themeColor": "#2c59d9",
-    "logoUrl": "https://bandb.firemodifications.com/assets/logo.png",
-    "active": true,
-    "requestUrl": "https://bandb.firemodifications.com/firewallgg/checkuser/",
-    "method": "get",
-    "appealLink": "https://bandb.firemodifications.com/appeal",
     "otherData": {}
   }
 ]
