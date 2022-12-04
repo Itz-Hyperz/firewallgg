@@ -27,6 +27,17 @@
                 </div>
             <% } %>
             <br>
+            <% if(typeof apiInfo == 'undefined') { %>
+                <p style="font-weight: 700;">Generate an API Token</p>
+                <a href="/api/generatekey" class="btn btn-primary mb-5"><i class="fa-solid fa-arrows-rotate"></i> Generate Token</a>
+            <% } else { %>
+                <h3 class="mb-4" style="font-weight: 700;">Your API Information</h3>
+                <p><span style="font-weight: 700;">UserId:</span> <%= apiInfo.userId %></p>
+                <p><span style="font-weight: 700;">Token:</span> <span class="censored"><%= apiInfo.token %></span></p>
+                <p><span style="font-weight: 700;">Banned:</span> <span style="color: yellow;"><%= apiInfo.banned %></span></p>
+                <a href="/api/generatekey" class="btn btn-primary mb-5"><i class="fa-solid fa-arrows-rotate"></i> Regenerate Token</a>
+            <% }; %>
+            <br>
         </div>
         <%- include('_footer') %>
     </body>
