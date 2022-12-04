@@ -9,7 +9,6 @@
 		"appealLink": "https://store.hyperz.net/discord",
 		"otherData": {}
 	},
-
 	{
 		"name": "Stop The Resellers",
 		"themeColor": "#DB6574",
@@ -18,6 +17,16 @@
 		"requestUrl": "https://stoptheresellers.com/api/v1/checkUser/",
 		"method": "get",
 		"appealLink": "https://stoptheresellers.com",
+		"otherData": {}
+	},
+	{
+		"name": "Global Bans",
+		"themeColor": "#212529",
+		"logoUrl": "https://www.gbans.xyz/static/media/logo.a8758119a29feafd991c.png",
+		"active": true,
+		"requestUrl": "https://globalbansapi.xyz/firewallgg/checkuser/",
+		"method": "get",
+		"appealLink": "https://www.gbans.xyz/discord",
 		"otherData": {}
 	},
 	{
@@ -68,16 +77,6 @@
 		"requestUrl": "https://ggprotection.xyz/firewallgg/checkuser/",
 		"method": "get",
 		"appealLink": "https://ggprotection.xyz/appeal",
-		"otherData": {}
-	},
-	{
-		"name": "Global Bans",
-		"themeColor": "#212529",
-		"logoUrl": "https://www.gbans.xyz/static/media/logo.a8758119a29feafd991c.png",
-		"active": true,
-		"requestUrl": "https://globalbansapi.xyz/firewallgg/checkuser/",
-		"method": "get",
-		"appealLink": "https://www.gbans.xyz/discord",
 		"otherData": {}
 	}
 ]
