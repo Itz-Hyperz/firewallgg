@@ -2,9 +2,12 @@
 const config = require("./config.js");
 const express = require("express");
 const app = express();
+const fs = require('node:fs');
 const chalk = require('chalk');
 const axios = require('axios');
 const firewallgg = require("firewallgg");
+const Discord = require('discord.js');
+const bansPushHook = new Discord.WebhookClient({ url: 'YOUR_WEBHOOK_URL' });
 
 // Backend Initialization
 const backend = require('./backend.js');
@@ -49,7 +52,9 @@ app.get('', async function(req, res) {
 
 app.get('/account', backend.checkAuth, async function(req, res) {
     let bannedList = await firewallgg(req.session.passport.user.id);
-    res.render('account.ejs', { loggedIn: req.isAuthenticated(), user: req.session.passport.user, bannedList: bannedList });
+    let parsed = await JSON.parse(fs.readFileSync('./apikeys.json'));
+    let apiInfo = parsed.filter(a => a.userId == req.session.passport.user.id)[0];
+    res.render('account.ejs', { loggedIn: req.isAuthenticated(), user: req.session.passport.user, bannedList: bannedList, apiInfo: apiInfo });
 });
 
 app.get('/search/:userid', async function(req, res) {
@@ -132,6 +137,106 @@ app.get('/api/checkuser/:userid', async function(req, res) {
             };
         } catch(e) {}
     };
+});
+
+app.get('/api/generatekey', backend.checkAuth, async function(req, res) {
+    let parsed = await JSON.parse(fs.readFileSync('./apikeys.json'));
+    let newKey = await backend.generateRandom(34);
+    let check = parsed.filter(a => a.userId == req.session.passport.user.id)[0];
+    let newArray = [];
+    if(check) {
+        if(check.banned) return res.send('This key is banned. Please contact Hyperz#0001');
+        for(let item of parsed) {
+            if(item.userId == req.session.passport.user.id) {
+                newArray.push({
+                    userId: req.session.passport.user.id,
+                    token: newKey,
+                    banned: false
+                });
+            } else {
+                newArray.push(item);
+            };
+        };
+        parsed = newArray;
+    } else {
+        parsed.push({
+            userId: req.session.passport.user.id,
+            token: newKey,
+            banned: false
+        });
+    };
+    let stringified = JSON.stringify(parsed, null, 4) + '\n';
+    fs.writeFileSync('./apikeys.json', stringified);
+    return res.redirect(`/account`);
+});
+
+app.get('/api/togglebankey/:userid', backend.checkAuth, async function(req, res) {
+    if(req.session.passport.user.id != '704094587836301392') return res.send('You are not authorized to generate API keys!');
+    if(!req?.params?.userid) return res.send('You did not provide a userId to ban!');
+    let parsed = await JSON.parse(fs.readFileSync('./apikeys.json'));
+    let check = parsed.filter(a => a.userId == req.params.userid)[0];
+    let newArray = [];
+    let toggledStatus = false;
+    if(check) {
+        let obj;
+        if(check.banned) {
+            obj = {
+                userId: check.userId,
+                token: check.token,
+                banned: false
+            };
+        } else {
+            toggledStatus = true;
+            obj = {
+                userId: check.userId,
+                token: check.token,
+                banned: true
+            };
+        };
+        for(let item of parsed) {
+            if(item.userId == req.params.userid) {
+                newArray.push(obj);
+            } else {
+                newArray.push(item);
+            };
+        };
+        parsed = newArray;
+    } else {
+        return res.send('That userId does not own an API key...');
+    };
+    let stringified = JSON.stringify(parsed, null, 4) + '\n';
+    fs.writeFileSync('./apikeys.json', stringified);
+    return res.send(`Key ban toggled for userId ${req.params.userid} to ${toggledStatus}`);
+});
+
+app.post('/api/postban', async function(req, res) {
+    // Authorization
+    if(!req?.headers?.authorization) return res.type('json').send(JSON.stringify({ status: 403, reason: "No authorization key provided in the request headers." }, null, 4) + '\n');
+    let parsed = await JSON.parse(fs.readFileSync('./apikeys.json'));
+    let check = parsed.filter(a => a.token == req?.headers?.authorization)[0];
+    if(!check) return res.type('json').send(JSON.stringify({ status: 403, reason: "Invalid API Token sent in request / doesn't exist." }, null, 4) + '\n');
+    if(check.banned) return res.type('json').send(JSON.stringify({ status: 403, reason: "Your API token has been banned." }, null, 4) + '\n');
+    // Make sure JSON keys are all here
+    if(!req?.body?.userId) return res.type('json').send(JSON.stringify({ status: 500, reason: "Missing userId in request body" }, null, 4) + '\n');
+    if(!req.body.userTag) return res.type('json').send(JSON.stringify({ status: 500, reason: "Missing userTag in request body" }, null, 4) + '\n');
+    if(!req.body.databaseName) return res.type('json').send(JSON.stringify({ status: 500, reason: "Missing databaseName in request body" }, null, 4) + '\n');
+    if(!req.body.banReason) return res.type('json').send(JSON.stringify({ status: 500, reason: "Missing banReason in request body" }, null, 4) + '\n');
+    if(!req.body.banProof) return res.type('json').send(JSON.stringify({ status: 500, reason: "Missing banProof in request body" }, null, 4) + '\n');
+    // Message Builder
+    let webhookEmbed = new Discord.MessageEmbed()
+	.setTitle(`User Banned - ${req.body.databaseName}`)
+    .setDescription(`**User:** [${req.body.userTag}](https://discord.com/users/${req.body.userId}) (${req.body.userId})\n**Database:** ${req.body.databaseName}\n**Reason:** ${req.body.banReason}`)
+    .setColor('#5865F2')
+    .setTimestamp()
+    .setFooter({ text: req.body.databaseName })
+    .setThumbnail(`${config.domain}/assets/logo.png`)
+    try { webhookEmbed.setImage(req.body.banProof) } catch(e) {};
+    // Sending the message (darkbot will handle crossposting the messages)
+    await bansPushHook.send({
+        embeds: [webhookEmbed],
+    }).catch(e => { if(config.debugMode) console.log(e); });
+    // Returning a successful response
+    return res.type('json').send(JSON.stringify({ status: 201, reason: "SUCCESS" }, null, 4) + '\n');
 });
 
 app.get('/auth/discord', passport.authenticate('discord'));
