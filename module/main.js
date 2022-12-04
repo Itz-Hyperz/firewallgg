@@ -4,6 +4,5 @@ module.exports = async function(userId) {
         method: 'get',
         url: `https://firewall.hyperz.net/api/checkuser/${userId}`
     });
-    let bannedList = listFetch.data;
-    return bannedList;
+    return listFetch.data;
 };
