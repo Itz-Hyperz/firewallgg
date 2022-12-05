@@ -1,12 +1,12 @@
 const axios = require('axios');
 
 const ban = (userId, userTag, databaseName, banReason, banProof) => {
-    const fetch = await axios.post({
-        userId,
-        userTag,
-        databaseName,
-        banReason,
-        banProof
+    const fetch = await axios.post('https://firewall.hyperz.net/api/postban', {
+        userId: userId,
+        userTag: userTag,
+        databaseName: databaseName,
+        banReason: banReason,
+        banProof: banProof
     })
     
     return fetch.data;
