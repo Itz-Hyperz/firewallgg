@@ -78,5 +78,15 @@
 		"method": "get",
 		"appealLink": "https://ggprotection.xyz/appeal",
 		"otherData": {}
+	},
+	{
+		"name": "Fletch BanBase",
+		"themeColor": "#171a22",
+		"logoUrl": "https://fletchbot.xyz/assets/fletchbandatabase.png",
+		"active": true,
+		"requestUrl": "https://banbase.fletchbot.xyz/firewallgg/checkuser/",
+		"method": "get",
+		"appealLink": "https://banbase.fletchbot.xyz/appeal",
+		"otherData": {}
 	}
 ]
