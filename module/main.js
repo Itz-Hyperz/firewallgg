@@ -6,7 +6,7 @@ function setToken(token) {
     providedToken = token;
 };
 
-async function postBan(userId, userTag, databaseName, banReason, banProof) => {
+async function postBan(userId, userTag, databaseName, banReason, banProof) {
     if(typeof providedToken == 'undefined') return console.log('FirewallGG requires a token to post a ban, use .setToken("YOUR_API_TOKEN") before utilising postBan.');
     const fetch = await axios({
         method: 'POST',
@@ -27,7 +27,7 @@ async function postBan(userId, userTag, databaseName, banReason, banProof) => {
     return fetch.data;
 };
 
-async function search(userId) => {
+async function search(userId) {
     if(typeof userId == 'undefined') console.log('No userId was defined in FirewallGG NPM request.')
     let listFetch = await axios({
         method: 'get',
