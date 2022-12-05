@@ -51,7 +51,7 @@ app.get('', async function(req, res) {
 });
 
 app.get('/account', backend.checkAuth, async function(req, res) {
-    let bannedList = await firewallgg(req.session.passport.user.id);
+    let bannedList = await firewallgg.search(req.session.passport.user.id);
     let parsed = await JSON.parse(fs.readFileSync('./apikeys.json'));
     let apiInfo = parsed.filter(a => a.userId == req.session.passport.user.id)[0];
     res.render('account.ejs', { loggedIn: req.isAuthenticated(), user: req.session.passport.user, bannedList: bannedList, apiInfo: apiInfo });
@@ -59,7 +59,7 @@ app.get('/account', backend.checkAuth, async function(req, res) {
 
 app.get('/search/:userid', async function(req, res) {
     if(!req?.params?.userid) return res.redirect('/');
-    let bannedList = await firewallgg(req.params.userid);
+    let bannedList = await firewallgg.search(req.params.userid);
     res.render('search.ejs', { loggedIn: req.isAuthenticated(), bannedList: bannedList, searchId: req.params.userid });
 });
 
