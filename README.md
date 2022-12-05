@@ -1,6 +1,6 @@
 # FirewallGG
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-14-blue.svg)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-15-blue.svg)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <img align="right" height="60" width="60" alt="" src="https://github.com/Itz-Hyperz/firewallgg/blob/main/website/public/assets/logo.png?raw=true" />
 
@@ -86,6 +86,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center"><a href="https://pluxmods.tebex.io/"><img src="https://avatars.githubusercontent.com/u/48103197?v=4?s=100" width="100px;" alt="Plactrix"/><br /><sub><b>Plactrix</b></sub></a><br /><a href="#ideas-Plactrix" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-Plactrix" title="Tools">🔧</a></td>
       <td align="center"><a href="https://www.weirdbandkid.games"><img src="https://avatars.githubusercontent.com/u/63882306?v=4?s=100" width="100px;" alt="Hunter Fleming"/><br /><sub><b>Hunter Fleming</b></sub></a><br /><a href="#ideas-weirdbandkid" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-weirdbandkid" title="Tools">🔧</a></td>
       <td align="center"><a href="https://github.com/IamAdren"><img src="https://avatars.githubusercontent.com/u/35825183?v=4?s=100" width="100px;" alt="Adren"/><br /><sub><b>Adren</b></sub></a><br /><a href="#ideas-IamAdren" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-IamAdren" title="Tools">🔧</a></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/codenationgroup"><img src="https://avatars.githubusercontent.com/u/66074938?v=4?s=100" width="100px;" alt="codenationgroup"/><br /><sub><b>codenationgroup</b></sub></a><br /><a href="#ideas-codenationgroup" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-codenationgroup" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>
