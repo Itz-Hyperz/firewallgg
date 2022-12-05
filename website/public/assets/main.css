@@ -229,4 +229,8 @@ pre code {
     .resultsAlert {
         width: 100%;
     }
+    .nav-link {
+        text-align: center;
+        margin-bottom: 0.2em;
+    }
 }
