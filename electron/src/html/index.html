@@ -1,0 +1,256 @@
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FirewallGG - Home</title>
+        <link rel="icon" href="./assets/logo.png">
+        <meta name="description" content="FirewallGG is a new form of Discord background checking allowing you to get as-much data as possible with just the click of a button!" />
+        <meta property="og:title" content="FirewallGG - Home" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="FirewallGG is a new form of Discord background checking allowing you to get as-much data as possible with just the click of a button!" />
+        <meta name="theme-color" content="#5865F2">
+        <meta property="og:image" content="./assets/logo.png">
+    </head>
+    <body>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="./assets/main.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo:ital@1&family=Montserrat:wght@300;500;700;800&family=Source+Code+Pro:wght@200;300&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous" defer></script>
+<nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/logo.png" alt="" width="55em" height="55em">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/api">Docs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/account">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/itz-hyperz/firewallgg" target="_blank">Github</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://npmjs.com/package/firewallgg" target="_blank">Package</a>
+          </li>
+        </ul>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <form action="/backend/search" method="post" style="margin-left: auto; margin-right: 0; margin-bottom: 0 !important;">
+          <div class="text-end">
+            <div class="input-group">
+              <input type="text" name="userid" class="form-control text-start text-bg-dark" placeholder="User Id..." aria-label="User Id..." aria-describedby="button-addon2" required>
+              <button class="btn btn-primary" type="submit" style="border-style: solid; border-width: 1px; border-color: white;"><i class="fa-solid fa-magnifying-glass"></i> Search User</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+</nav>
+<br>
+        <div class="container text-white text-center bg-dark" style="border-radius: 1em;">
+            <br>
+            <h1 style="font-weight: 700;" class="mb-4"><i class="fa-solid fa-shield-halved"></i> FirewallGG Security</h1>
+            <p class="mx-auto" style="width: 90%;">Welcome to FirewallGG! This is an API middleware that is allowing you to keep your Discord communities, Discord web based services, and much more secure to a new standard! FirewallGG is entirely open source and is accepting contributions right now! We are striving every day to redefine what a safe and secure community is on Discord. Interested in helping the project or contributing? Check out <a href="https://github.com/Itz-Hyperz/firewallgg" target="_blank" style="color: rgb(0, 162, 255);">our GitHub</a> for more information on the project! You can also see <a href="https://hyperz.net/discord" target="_blank" style="color: rgb(0, 162, 255);">our Discord</a> for community news, updates on FirewallGG, new bans that are now in place, and much much more!</p>
+            <br>
+            <div class="row justify-content-center">
+                <div class="col-4 mb-3">
+                    <a class="btn btn-primary homebuttonlol" href="https://hyperz.net/discord" target="_blank"><i class="fa-brands fa-discord"></i> Our Discord</a>
+                </div>
+                <div class="col-4 mb-3">
+                    <a class="btn btn-primary homebuttonlol" href="https://github.com/Itz-Hyperz/firewallgg" target="_blank"><i class="fa-brands fa-github"></i> Our Github</a>
+                </div>
+                <div class="col-4 mb-3">
+                    <a class="btn btn-primary homebuttonlol" href="/api"><i class="fa-solid fa-code-compare"></i> Our Endpoints</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <br>
+        <div class="container text-white text-center bg-dark" style="border-radius: 1em;">
+            <br>
+            <h1 style="font-weight: 700;">Search A User Id</h1>
+            <p>Use the below search box to search a user Id and return any active bans via our API.</p>
+            <br>
+            <form action="/backend/search" method="post">
+                <div class="mb-3">
+                    <label style="font-weight: 600;" for="userid" class="form-label">Discord User Id</label>
+                    <input type="text" class="form-control text-white bg-dark" name="userid" id="userid" placeholder="Input a user Id..." required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 60%"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+            </form>
+            <br>
+        </div>
+        <br>
+        <div class="container text-white text-center bg-dark" style="border-radius: 1em;">
+            <br>
+            <h1 style="font-weight: 700;">Databases</h1>
+            <p>Below you can view the added databases we support.</p>
+            <br>
+            <div class="container">
+                <div class="row justify-content-center align-items-center text-center">
+                    
+                        <div class="col-sm-2">
+                            <img  style="height: 10em; width: 10em; margin-bottom: 1em; border-radius: 1em;" src="https://cdn.hyperz.net/u/main/vJohEi4.png">
+                            <h4 style="font-size: 1.3em; font-weight: 700; margin-bottom: 1em;"><a href="https://store.hyperz.net/discord" target="_blank">HD | Blacklists</a></h4>
+                        </div>
+                        <div class="hiddenHr">
+                            <hr>
+                        </div>
+                    
+                        <div class="col-sm-2">
+                            <img  style="height: 10em; width: 10em; margin-bottom: 1em; border-radius: 1em;" src="https://stoptheresellers.com/assets/images/logo.png">
+                            <h4 style="font-size: 1.3em; font-weight: 700; margin-bottom: 1em;"><a href="https://stoptheresellers.com" target="_blank">Stop The Resellers</a></h4>
+                        </div>
+                        <div class="hiddenHr">
+                            <hr>
+                        </div>
+                    
+                        <div class="col-sm-2">
+                            <img  style="height: 10em; width: 10em; margin-bottom: 1em; border-radius: 1em;" src="https://www.gbans.xyz/static/media/logo.a8758119a29feafd991c.png">
+                            <h4 style="font-size: 1.3em; font-weight: 700; margin-bottom: 1em;"><a href="https://www.gbans.xyz/discord" target="_blank">Global Bans</a></h4>
+                        </div>
+                        <div class="hiddenHr">
+                            <hr>
+                        </div>
+                    
+                        <div class="col-sm-2">
+                            <img  style="height: 10em; width: 10em; margin-bottom: 1em; border-radius: 1em;" src="https://strongertogether.network/assets/logo.png">
+                            <h4 style="font-size: 1.3em; font-weight: 700; margin-bottom: 1em;"><a href="https://strongertogether.network" target="_blank">StrongerTogether</a></h4>
+                        </div>
+                        <div class="hiddenHr">
+                            <hr>
+                        </div>
+                    
+                        <div class="col-sm-2">
+                            <img  style="height: 10em; width: 10em; margin-bottom: 1em; border-radius: 1em;" src="https://cdn.hyperz.net/u/xolify/5iYxLSp.png">
+                            <h4 style="font-size: 1.3em; font-weight: 700; margin-bottom: 1em;"><a href="https://bandb.xolify.store" target="_blank">Xolify BanDB</a></h4>
+                        </div>
+                        <div class="hiddenHr">
+                            <hr>
+                        </div>
+                    
+                        <div class="col-sm-2">
+                            <img  style="height: 10em; width: 10em; margin-bottom: 1em; border-radius: 1em;" src="https://cdn.hyperz.net/u/main/qYD0eMD.png">
+                            <h4 style="font-size: 1.3em; font-weight: 700; margin-bottom: 1em;"><a href="https://leakguard.net" target="_blank">LeakGuard</a></h4>
+                        </div>
+                        <div class="hiddenHr">
+                            <hr>
+                        </div>
+                    
+                        <div class="col-sm-2">
+                            <img  style="height: 10em; width: 10em; margin-bottom: 1em; border-radius: 1em;" src="https://cdn.hyperz.net/u/main/vSISoFR.jpg">
+                            <h4 style="font-size: 1.3em; font-weight: 700; margin-bottom: 1em;"><a href="https://sentinelbot.xyz/appeal" target="_blank">Sentinel</a></h4>
+                        </div>
+                        <div class="hiddenHr">
+                            <hr>
+                        </div>
+                    
+                        <div class="col-sm-2">
+                            <img  style="height: 10em; width: 10em; margin-bottom: 1em; border-radius: 1em;" src="https://cdn.hyperz.net/u/main/2q3RqCD.png">
+                            <h4 style="font-size: 1.3em; font-weight: 700; margin-bottom: 1em;"><a href="https://ggprotection.xyz/appeal" target="_blank">GG Protection</a></h4>
+                        </div>
+                        <div class="hiddenHr">
+                            <hr>
+                        </div>
+                    
+                        <div class="col-sm-2">
+                            <img  style="height: 10em; width: 10em; margin-bottom: 1em; border-radius: 1em;" src="https://fletchbot.xyz/assets/fletchbandatabase.png">
+                            <h4 style="font-size: 1.3em; font-weight: 700; margin-bottom: 1em;"><a href="https://banbase.fletchbot.xyz/appeal" target="_blank">Fletch BanBase</a></h4>
+                        </div>
+                        <div class="hiddenHr">
+                            <hr>
+                        </div>
+                    
+                </div>
+                <br>
+                <a class="btn btn-primary" style="width: 100%" href="https://github.com/Itz-Hyperz/firewallgg/blob/main/databases.json" target="_blank"><i class="fa-solid fa-plus"></i> Add Your Database</a>
+            </div>
+            <br>
+        </div>
+        <br>
+        <div class="container text-white text-center bg-dark" style="border-radius: 1em;">
+            <br>
+            <h1 style="font-weight: 700;">Affiliated Services</h1>
+            <p>Below you will find our integrated services and affiliates.</p>
+            <br>
+            <div class="container">
+                <div class="row justify-content-center align-items-center text-center">
+                    
+                        <div class="col-sm-2">
+                            <img  style="height: 10em; width: 10em; margin-bottom: 1em; border-radius: 1em;" src="https://store.hyperz.net/assets/logo.png">
+                            <h4 style="font-weight: 700; margin-bottom: 1em;"><a href="https://store.hyperz.net" target="_blank">Hyperz Dev.</a></h4>
+                        </div>
+                        <div class="hiddenHr">
+                            <hr>
+                        </div>
+                    
+                        <div class="col-sm-2">
+                            <img  style="height: 10em; width: 10em; margin-bottom: 1em; border-radius: 1em;" src="https://faxes.zone/assets/logo.png">
+                            <h4 style="font-weight: 700; margin-bottom: 1em;"><a href="https://faxes.zone" target="_blank">Weblutions</a></h4>
+                        </div>
+                        <div class="hiddenHr">
+                            <hr>
+                        </div>
+                    
+                        <div class="col-sm-2">
+                            <img  style="height: 10em; width: 10em; margin-bottom: 1em; border-radius: 1em;" src="https://plutos.world/assets/logo.png">
+                            <h4 style="font-weight: 700; margin-bottom: 1em;"><a href="https://plutos.world" target="_blank">Plutos World</a></h4>
+                        </div>
+                        <div class="hiddenHr">
+                            <hr>
+                        </div>
+                    
+                        <div class="col-sm-2">
+                            <img  style="height: 10em; width: 10em; margin-bottom: 1em; border-radius: 1em;" src="https://jordan2139.me/assets/JordanTransparent.png">
+                            <h4 style="font-weight: 700; margin-bottom: 1em;"><a href="https://jordan2139.me" target="_blank">Jordan2139</a></h4>
+                        </div>
+                        <div class="hiddenHr">
+                            <hr>
+                        </div>
+                    
+                        <div class="col-sm-2">
+                            <img  style="height: 10em; width: 10em; margin-bottom: 1em; border-radius: 1em;" src="https://www.adrencad.com/contributors/adren.png">
+                            <h4 style="font-weight: 700; margin-bottom: 1em;"><a href="https://www.adren.world" target="_blank">IamAdren</a></h4>
+                        </div>
+                        <div class="hiddenHr">
+                            <hr>
+                        </div>
+                    
+                </div>
+            </div>
+            <br>
+        </div>
+        <br>
+        <div class="container text-white text-center bg-dark" style="border-radius: 1em;">
+            <br>
+            <h1 style="font-weight: 700;">Project Contributors</h1>
+            <p>View all of our <a href="https://github.com/itz-hyperz/firewallgg" target="_blank">project contributors</a> below!</p>
+            <br>
+            <div class="container">
+                <div class="row justify-content-center align-items-center text-center">
+                </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <br>
+        <br>
+<div id="footer">
+    <p style="font-weight: 500;">Copyright &copy; 2022 <a href="/discord" target="_blank">Hyperz Development</a>.</p>
+</div>
+    </body>
+</html>
