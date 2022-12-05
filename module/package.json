@@ -1,6 +1,6 @@
 {
   "name": "firewallgg",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "FirewallGG is a simple program that will search all users in multiple database api's to see if they are banned in any of them. It will return a list of all databases the user is banned in as-well.",
   "main": "main.js",
   "scripts": {
