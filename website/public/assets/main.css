@@ -19,6 +19,19 @@ body {
     bottom: 0;
     left: 1em;
     color: white;
+    font-weight: 700;
+    background-color: #172144;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-width: 2px;
+    border-color: #5964F2;
+    color: #5865F2;
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
 }
 
 .bg-dark {
@@ -232,5 +245,16 @@ pre code {
     .nav-link {
         text-align: center;
         margin-bottom: 0.2em;
+    }
+    #footer {
+        left: 0;
+        background-color: transparent !important;
+        text-align: center;
+        width: 100%;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        border-width: 0 !important;
+        border-color: transparent !important;;
+        border-style: none !important;
     }
 }
