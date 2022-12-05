@@ -1,7 +1,7 @@
 {
-  "name": "hyperz-webtemplate",
+  "name": "firewallgg-website",
   "version": "1.0.0",
-  "description": "An ExpressJS template made by Hyperz#0001",
+  "description": "The website for FirewallGG.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
