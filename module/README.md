@@ -5,7 +5,7 @@ Code Example:
 ```js
     const firewallgg = require('firewallgg');
     (async () => {
-        let bans = await firewallgg("704094587836301392");
+        let bans = await firewallgg.search("704094587836301392");
         console.log(bans);
     });
 ```
