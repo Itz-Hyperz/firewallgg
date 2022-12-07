@@ -40,26 +40,6 @@
 		"otherData": {}
 	},
 	{
-		"name": "Xolify BanDB",
-		"themeColor": "#ffffff",
-		"logoUrl": "https://cdn.hyperz.net/u/xolify/5iYxLSp.png",
-		"active": true,
-		"requestUrl": "https://bandb.xolify.store/firewallgg/checkuser/",
-		"method": "get",
-		"appealLink": "https://bandb.xolify.store",
-		"otherData": {}
-	},
-	{
-		"name": "LeakGuard",
-		"themeColor": "#009CFE",
-		"logoUrl": "https://cdn.hyperz.net/u/main/qYD0eMD.png",
-		"active": true,
-		"requestUrl": "http://158.69.145.132:3000/firewallgg/checkuser/",
-		"method": "get",
-		"appealLink": "https://leakguard.net",
-		"otherData": {}
-	},
-	{
 		"name": "Sentinel",
 		"themeColor": "#fc7a02",
 		"logoUrl": "https://cdn.hyperz.net/u/main/vSISoFR.jpg",
