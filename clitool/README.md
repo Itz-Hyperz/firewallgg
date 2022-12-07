@@ -6,4 +6,4 @@ This is a simple executable program written in GoLang. This was originally made 
 # Credits
 - [@Hyperz](https://hyperz.net) *Physical programming.*
 - [@LogRocket](https://blog.logrocket.com/making-http-requests-in-go/) *HTTP request documentation.*
-- [TutorialEdge](https://tutorialedge.net/golang/reading-console-input-golang/) *Terminal input/output for questionaire.*
+- [@TutorialEdge](https://tutorialedge.net/golang/reading-console-input-golang/) *Terminal input/output for questionaire.*
