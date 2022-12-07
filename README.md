@@ -20,7 +20,7 @@ So again, your options are:
 - The [Website](https://firewall.hyperz.net).
 - The [Node Module](https://npmjs.com/package/firewallgg)
 - The [Web API](https://firewall.hyperz.net/api).
-- The [Desktop App](https://cdn.hyperz.net/u/xolify/IXlfI5A.exe)
+- The [Desktop CliTool](https://github.com/Itz-Hyperz/firewallgg/releases)
 
 ## Step Two - Use / Integrate
 For the basics, using the [Website](https://firewall.hyperz.net) or the [Desktop Process](https://github.com/Itz-Hyperz/firewallgg/releases) is pretty straight forward. Simple open one and enter a Discord User Id.
