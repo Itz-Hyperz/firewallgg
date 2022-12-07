@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FirewallGG HTML Example</title>
+</head>
+<body>
+    <input id="useridinput" type="text" placeholder="Enter a user Id..." required>
+    <button type="button" onclick="processEntry()">Send Request</button>
+    <script>
+        var data;
+        var a = document.getElementById("useridinput");
+        function processEntry() {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://firewall.hyperz.net/api/checkuser/" + a.value);
+            xhr.send();
+            xhr.onload = function() {
+                if (xhr.responseText) {
+                    data = JSON.parse(xhr.responseText)
+                    console.log(data)
+                } else {
+                    console.log("No records found");
+                };
+            };
+        };
+    </script>
+</body>
+</html>
