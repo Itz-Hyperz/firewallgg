@@ -64,7 +64,7 @@
 		"themeColor": "#171a22",
 		"logoUrl": "https://fletchbot.xyz/assets/fletchbandatabase.png",
 		"active": true,
-		"requestUrl": "https://banbase.fletchbot.xyz/api/v1/bans/users/",
+		"requestUrl": "https://banbase.fletchbot.xyz/api/v1/firewall/",
 		"method": "get",
 		"appealLink": "https://banbase.fletchbot.xyz/appeal",
 		"otherData": {}
