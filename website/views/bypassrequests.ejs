@@ -1,0 +1,77 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FirewallGG - Bypass</title>
+        <link rel="icon" href="/assets/logo.png">
+        <meta name="description" content="FirewallGG is a new form of Discord background checking allowing you to get as-much data as possible with just the click of a button!" />
+        <meta property="og:title" content="FirewallGG - Bypass" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="FirewallGG is a new form of Discord background checking allowing you to get as-much data as possible with just the click of a button!" />
+        <meta name="theme-color" content="#5865F2">
+        <meta property="og:image" content="/assets/logo.png">
+    </head>
+    <body>
+        <%- include('_header') %>
+        <div class="container text-white bg-dark p-3" style="border-radius: 1em;">
+            <br>
+            <h1 style="font-weight: 700; margin-bottom: 0.3em;">Active Bypass Requests</h1>
+            <p class="text-center mx-auto" style="margin-bottom: 0.3em; width: 90%; font-weight: 700;">Here you will be able to accept and deny bypass requests</p>
+            <hr>
+            <h3 style="font-weight: 700;"><i class="fa-solid fa-gavel"></i> Active Bypass Requests</h3>
+            <br>
+            <div class="maxheightbypass">
+                <div class="row justify-content-center">
+                    <% active.forEach(function(item) { %>
+                        <div class="col-lg-5 text-bg-dark p-4 text-center bypassblock">
+                            <h3 style="font-weight: 700;"><code><%= item.userId %></code></h3>
+                            <h4><%= item.bandb %></h4>
+                            <hr>
+                            <p><%= item.bandbreason %></p>
+                            <hr>
+                            <p><%= item.argument %></p>
+                            <hr>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 mb-2">
+                                    <a href="/backend/deletebypass/<%= item.userId %>" class="btn btn-primary w-100"><i class="fa-solid fa-ban"></i> Delete</a>
+                                </div>
+                                <div class="col-lg-6 mb-2">
+                                    <a href="/backend/bypassupdate/<%= item.userId %>" class="btn btn-primary w-100"><i class="fa-solid fa-user-slash"></i> Revoke</a>
+                                </div>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+            <hr>
+            <h3 style="font-weight: 700;"><i class="fa-regular fa-folder-open"></i> Pending Bypass Requests</h3>
+            <br>
+            <div class="maxheightbypass">
+                <div class="row justify-content-center">
+                    <% inactive.forEach(function(item) { %>
+                        <div class="col-lg-5 text-bg-dark p-4 text-center bypassblock">
+                            <h3 style="font-weight: 700;"><code><%= item.userId %></code></h3>
+                            <h4><%= item.bandb %></h4>
+                            <hr>
+                            <p><%= item.bandbreason %></p>
+                            <hr>
+                            <p><%= item.argument %></p>
+                            <hr>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-6 mb-2">
+                                    <a href="/backend/deletebypass/<%= item.userId %>" class="btn btn-primary w-100"><i class="fa-solid fa-ban"></i> Delete</a>
+                                </div>
+                                <div class="col-lg-6 mb-2">
+                                    <a href="/backend/bypassupdate/<%= item.userId %>" class="btn btn-primary w-100"><i class="fa-solid fa-check"></i> Grant</a>
+                                </div>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+            <br>
+        </div>
+        <br>
+        <%- include('_footer') %>
+    </body>
+</html>
