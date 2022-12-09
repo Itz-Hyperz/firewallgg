@@ -34,6 +34,43 @@ body {
     border-right-style: solid;
 }
 
+.bypasscontrol {
+    background-color: #5865F2 !important;
+    color: white;
+}
+
+.iconmovebypass {
+    margin-right: 0.4em;
+}
+
+.bypasstextarea1 {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-color: transparent !important;
+}
+
+.bypasstextarea2 {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.bypassblock {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border-radius: 1em;
+    border-color: #5865F2;
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 1em;
+}
+
+.maxheightbypass {
+    width: 100%;
+    max-height: 35em;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 .bg-dark {
     background-color: #172144 !important;
 }
@@ -63,6 +100,22 @@ body {
 .censored:hover, .censored:focus {
     filter: blur(0);
 }
+
+.customDiv {
+    width: 100%;
+    max-height: 25em;
+    overflow-y: auto;
+}
+
+table {
+    background-color: rgba(88, 101, 242, 0.3) !important;
+    color: white !important;
+    line-height: 1;
+    width: 100% !important;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
 
 a {
     color: white;
@@ -137,6 +190,7 @@ pre code {
 
 .btn-primary {
     background-color: #5865F2 !important;
+    border-color: #5865F2 !important;
 }
 
 .form-control {
