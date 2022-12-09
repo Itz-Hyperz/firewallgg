@@ -57,6 +57,33 @@ app.get('/account', backend.checkAuth, async function(req, res) {
     res.render('account.ejs', { loggedIn: req.isAuthenticated(), user: req.session.passport.user, bannedList: bannedList, apiInfo: apiInfo });
 });
 
+app.get('/bypass/request', backend.checkAuth, async function(req, res) {
+    let check = await firewallgg.search(req.session.passport.user.id);
+    if(!check[0]) return res.redirect('/account');
+    let bypasses = fs.readFileSync('./bypassbans.json');
+    let parsed = JSON.parse(bypasses);
+    let checkBypass = await parsed.filter(x => x.userId == req.session.passport.user.id)[0]
+    if(checkBypass) return res.redirect('/bypass/status')
+    res.render('bypass.ejs', { loggedIn: req.isAuthenticated(), user: req.session.passport.user });
+});
+
+app.get('/bypass/status', backend.checkAuth, async function(req, res) {
+    let bypasses = fs.readFileSync('./bypassbans.json');
+    let parsed = JSON.parse(bypasses);
+    let checkBypass = await parsed.filter(x => x.userId == req.session.passport.user.id)[0]
+    if(!checkBypass) return res.redirect('/bypass/request')
+    res.render('bypasssent.ejs', { loggedIn: req.isAuthenticated(), bypass: checkBypass });
+});
+
+app.get('/admin/bypass', backend.checkAuth, async function(req, res) {
+    if(req.session.passport.user.id != '704094587836301392') return res.redirect('/404');
+    let bypasses = fs.readFileSync('./bypassbans.json');
+    let parsed = JSON.parse(bypasses);
+    let a = parsed.filter(a => a.active == true);
+    let b = parsed.filter(b => b.active == false);
+    res.render('bypassrequests.ejs', { loggedIn: req.isAuthenticated(), active: a, inactive: b });
+});
+
 app.get('/search/:userid', async function(req, res) {
     if(!req?.params?.userid) return res.redirect('/');
     let bannedList = await firewallgg.search(req.params.userid);
@@ -239,6 +266,77 @@ app.post('/api/postban', async function(req, res) {
     return res.type('json').send(JSON.stringify({ status: 201, reason: "SUCCESS" }, null, 4) + '\n');
 });
 
+app.post('/backend/sendrequest/bypass', backend.checkAuth, async function(req, res) {
+    let bypasses = fs.readFileSync('./bypassbans.json');
+    let parsed = JSON.parse(bypasses);
+    let checkBypass = await parsed.filter(x => x.userId == req.session.passport.user.id)[0]
+    if(checkBypass) return res.send(`You have already had a ban bypass request placed. Active?: ${checkBypass.active}`);
+    let obj = {
+        userId: req.session.passport.user.id,
+        bandb: req.body.database,
+        bandbreason: req.body.banreason,
+        argument: req.body.args,
+        active: false
+    };
+    parsed.push(obj);
+    let conv = JSON.stringify(parsed, null, 4) + '\n';
+    fs.writeFileSync('./bypassbans.json', conv);
+    res.redirect('/bypass/status');
+    // Message Builder
+    let webhookEmbed = new Discord.MessageEmbed()
+	.setTitle(`New Bypass Request`)
+    .setDescription(`A user has just submitted a bypass request to the Firewall!\n\n**User Reference:** <@${req.session.passport.user.id}> (${req.session.passport.user.id})\n**Database Reference:** ${req.body.database}`)
+    .setColor('#5865F2')
+    .setTimestamp()
+    .setThumbnail(`${config.domain}/assets/logo.png`)
+    // Sending the message (darkbot will handle crossposting the messages)
+    await bansPushHook.send({
+        embeds: [webhookEmbed],
+    }).catch(e => { if(config.debugMode) console.log(e); });
+});
+
+app.get('/backend/bypassupdate/:userid', backend.checkAuth, async function(req, res) {
+    if(req.session.passport.user.id != '704094587836301392') return res.redirect('/404');
+    let bypasses = fs.readFileSync('./bypassbans.json');
+    let parsed = JSON.parse(bypasses);
+    let checkBypass = await parsed.filter(x => x.userId == req.session.passport.user.id)[0]
+    if(!checkBypass) return res.redirect(`/404`);
+    let newArray = [];
+    for(let item of parsed) {
+        if(item.userId == req.params.userid) {
+            if(item.active) {
+                item.active = false;
+                newArray.push(item);
+            } else {
+                item.active = true;
+                newArray.push(item);
+            };
+        } else {
+            newArray.push(item);
+        };
+    };
+    let conv = JSON.stringify(newArray, null, 4) + '\n';
+    fs.writeFileSync('./bypassbans.json', conv);
+    res.redirect('/admin/bypass')
+});
+
+app.get('/backend/deletebypass/:userid', backend.checkAuth, async function(req, res) {
+    if(req.session.passport.user.id != '704094587836301392') return res.redirect('/404');
+    let bypasses = fs.readFileSync('./bypassbans.json');
+    let parsed = JSON.parse(bypasses);
+    let checkBypass = await parsed.filter(x => x.userId == req.session.passport.user.id)[0]
+    if(!checkBypass) return res.redirect(`/404`);
+    let newArray = [];
+    for(let item of parsed) {
+        if(item.userId != req.params.userid) {
+            newArray.push(item);
+        };
+    };
+    let conv = JSON.stringify(newArray, null, 4) + '\n';
+    fs.writeFileSync('./bypassbans.json', conv);
+    res.redirect('/admin/bypass')
+});
+
 app.get('/auth/discord', passport.authenticate('discord'));
 app.get('/auth/discord/callback', passport.authenticate('discord', {failureRedirect: '/'}), async function(req, res) {
     req.session?.loginRef ? res.redirect(req.session.loginRef) : res.redirect('/');
@@ -260,6 +358,9 @@ console.log(chalk.blue('FirewallGG Started on Port ' + config.port));
 
 // Functions
 async function makeRequest(database, userId) {
+    let bypasses = fs.readFileSync('./bypassbans.json');
+    let parsed = JSON.parse(bypasses);
+    if(parsed.filter(x => x.userId == userId)[0]) return {"active": false,"blacklistdata": {"blacklisted": false}};
     let request = await axios({
         method: database.method,
         url: `${database.requestUrl}${userId}`,
@@ -272,13 +373,12 @@ async function makeRequest(database, userId) {
         return "failed";
     });
     if(request == "failed") {
-        let obj = {
+        return {
             "active": false,
             "blacklistdata": {
                 "blacklisted": false
             }
         };
-        return obj;
     } else {
         if(!request?.data) return;
         return request.data;
