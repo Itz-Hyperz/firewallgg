@@ -360,7 +360,7 @@ console.log(chalk.blue('FirewallGG Started on Port ' + config.port));
 async function makeRequest(database, userId) {
     let bypasses = fs.readFileSync('./bypassbans.json');
     let parsed = JSON.parse(bypasses);
-    if(parsed.filter(x => x.userId == userId)[0]) return {"active": false,"blacklistdata": {"blacklisted": false}};
+    if(parsed.filter(x => x.userId == userId && x.active == true)[0]) return {"active": false,"blacklistdata": {"blacklisted": false}};
     let request = await axios({
         method: database.method,
         url: `${database.requestUrl}${userId}`,
