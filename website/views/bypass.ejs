@@ -1,0 +1,51 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FirewallGG - Bypass</title>
+        <link rel="icon" href="/assets/logo.png">
+        <meta name="description" content="FirewallGG is a new form of Discord background checking allowing you to get as-much data as possible with just the click of a button!" />
+        <meta property="og:title" content="FirewallGG - Bypass" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="FirewallGG is a new form of Discord background checking allowing you to get as-much data as possible with just the click of a button!" />
+        <meta name="theme-color" content="#5865F2">
+        <meta property="og:image" content="/assets/logo.png">
+    </head>
+    <body>
+        <%- include('_header') %>
+        <div class="container text-white bg-dark" style="border-radius: 1em;">
+            <br>
+            <h1 style="font-weight: 700; margin-bottom: 0.3em;">Request A Bypass</h1>
+            <p class="text-center mx-auto" style="margin-bottom: 0.3em; width: 90%;">This form will allow you to request that your ban be bypassed by our system. This can be extremely useful when a database is showing bias against you!</p>
+            <hr>
+            <div class="container">
+                <form action="/backend/sendrequest/bypass" class="p-4" method="post">
+                    <label for="basic-url" class="form-label">Please fill out the below form.</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text bypasscontrol"><i class="fa-brands fa-discord iconmovebypass"></i>Current User Id:</span>
+                        <input type="text" name="userid" disabled required value="<%= user.id %>" class="form-control text-bg-dark text-start">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text bypasscontrol"><i class="fa-solid fa-gavel iconmovebypass"></i> Ban Databases:</span>
+                        <input type="text" name="database" required placeholder="The database that you are banned in." class="form-control text-bg-dark text-start">
+                    </div>
+                    <div class="mb-3">
+                        <span class="input-group-text bypasscontrol bypasstextarea1"><i class="fa-solid fa-scroll iconmovebypass"></i> BanDB Reason:</span>
+                        <textarea type="text" name="banreason" required placeholder="The database reason for your ban (their words)." class="form-control text-bg-dark text-start w-100 bypasstextarea2"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <span class="input-group-text bypasscontrol bypasstextarea1"><i class="fa-solid fa-bullhorn iconmovebypass"></i> Bypass Argument:</span>
+                        <textarea type="text" name="args" required placeholder="Why you believe that you should be bypassed in the Firewall." class="form-control text-bg-dark text-start w-100 bypasstextarea2" rows="5"></textarea>
+                    </div>
+                    <hr>
+                    <div class="text-end">
+                        <a href="/" class="btn btn-secondary"><i class="fa-solid fa-ban"></i> Cancel</a>
+                        <button type="submit" class="btn btn-primary text-center"><i class="fa-solid fa-floppy-disk"></i> Submit Request</button>
+                    </div>
+                </form>
+            </div>
+            <br>
+        </div>
+        <%- include('_footer') %>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FirewallGG - Bypass</title>
+        <link rel="icon" href="/assets/logo.png">
+        <meta name="description" content="FirewallGG is a new form of Discord background checking allowing you to get as-much data as possible with just the click of a button!" />
+        <meta property="og:title" content="FirewallGG - Bypass" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="FirewallGG is a new form of Discord background checking allowing you to get as-much data as possible with just the click of a button!" />
+        <meta name="theme-color" content="#5865F2">
+        <meta property="og:image" content="/assets/logo.png">
+    </head>
+    <body>
+        <%- include('_header') %>
+        <div class="container text-white bg-dark" style="border-radius: 1em;">
+            <br>
+            <h1 style="font-weight: 700; margin-bottom: 0.3em;">Bypass Request Status</h1>
+            <p class="text-center mx-auto" style="margin-bottom: 0.3em; width: 90%; font-weight: 700;">As of right now your bypass request is currently: <%= bypass.active %></p>
+            <p class="text-center">If you just now submitted your bypass request this could change at any point! Requests are reviewed every 48 hours.</p>
+            <div class="text-center">
+                <a href="/" class="btn btn-primary btn-lg"><i class="fa-solid fa-house"></i> Return Home</a>
+            </div>
+            <br>
+        </div>
+        <%- include('_footer') %>
+    </body>
+</html>
