@@ -299,16 +299,19 @@ app.get('/backend/bypassupdate/:userid', backend.checkAuth, async function(req, 
     if(req.session.passport.user.id != '704094587836301392') return res.redirect('/404');
     let bypasses = fs.readFileSync('./bypassbans.json');
     let parsed = JSON.parse(bypasses);
-    let checkBypass = await parsed.filter(x => x.userId == req.session.passport.user.id)[0]
+    let checkBypass = await parsed.filter(x => x.userId == req.params.userid)[0]
     if(!checkBypass) return res.redirect(`/404`);
     let newArray = [];
+    let embedTitle;
     for(let item of parsed) {
         if(item.userId == req.params.userid) {
             if(item.active) {
                 item.active = false;
+                embedTitle = "🔒  Bypass Revoked!";
                 newArray.push(item);
             } else {
                 item.active = true;
+                embedTitle = "🔓  Bypass Granted!";
                 newArray.push(item);
             };
         } else {
@@ -318,13 +321,24 @@ app.get('/backend/bypassupdate/:userid', backend.checkAuth, async function(req, 
     let conv = JSON.stringify(newArray, null, 4) + '\n';
     fs.writeFileSync('./bypassbans.json', conv);
     res.redirect('/admin/bypass')
+    // Message Builder
+    let webhookEmbed = new Discord.MessageEmbed()
+	.setTitle(embedTitle)
+    .setDescription(`A bypass request was just updated!\n\n**User Reference:** <@${req.params.userid}> (${req.params.userid})\n**Database Reference:** ${checkBypass.bandb}`)
+    .setColor('#5865F2')
+    .setTimestamp()
+    .setThumbnail(`${config.domain}/assets/logo.png`)
+    // Sending the message (darkbot will handle crossposting the messages)
+    await bansPushHook.send({
+        embeds: [webhookEmbed],
+    }).catch(e => { if(config.debugMode) console.log(e); });
 });
 
 app.get('/backend/deletebypass/:userid', backend.checkAuth, async function(req, res) {
     if(req.session.passport.user.id != '704094587836301392') return res.redirect('/404');
     let bypasses = fs.readFileSync('./bypassbans.json');
     let parsed = JSON.parse(bypasses);
-    let checkBypass = await parsed.filter(x => x.userId == req.session.passport.user.id)[0]
+    let checkBypass = await parsed.filter(x => x.userId == req.params.userid)[0]
     if(!checkBypass) return res.redirect(`/404`);
     let newArray = [];
     for(let item of parsed) {
