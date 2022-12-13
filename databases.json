@@ -68,5 +68,15 @@
 		"method": "get",
 		"appealLink": "https://banbase.fletchbot.xyz/appeal",
 		"otherData": {}
+	},
+		{
+		"name": "SpeedBans",
+		"themeColor": "#ADD8E6",
+		"logoUrl": "https://i.imgur.com/m9IFC9T.png",
+		"active": true,
+		"requestUrl": "http://bans.ryansprogramming.com/firewallgg/checkuser/",
+		"method": "get",
+		"appealLink": "http://bans.ryansprogramming.com/appeal",
+		"otherData": {}
 	}
 ]
