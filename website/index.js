@@ -249,6 +249,7 @@ app.post('/api/postban', async function(req, res) {
     if(!req.body.databaseName) return res.type('json').send(JSON.stringify({ status: 500, reason: "Missing databaseName in request body" }, null, 4) + '\n');
     if(!req.body.banReason) return res.type('json').send(JSON.stringify({ status: 500, reason: "Missing banReason in request body" }, null, 4) + '\n');
     if(!req.body.banProof) return res.type('json').send(JSON.stringify({ status: 500, reason: "Missing banProof in request body" }, null, 4) + '\n');
+    if(!req.body.banProof.startsWith('http')) return res.type('json').send(JSON.stringify({ status: 500, reason: "banProof is not a link starting with http" }, null, 4) + '\n');
     // Message Builder
     let webhookEmbed = new Discord.MessageEmbed()
 	.setTitle(`User Banned - ${req.body.databaseName}`)
