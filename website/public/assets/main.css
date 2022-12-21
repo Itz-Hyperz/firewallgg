@@ -12,6 +12,7 @@ body {
     padding: 0;
     background-color: #060F27;
     font-family: 'Work Sans', sans-serif !important;
+    word-break: break-word;
 }
 
 #footer {
