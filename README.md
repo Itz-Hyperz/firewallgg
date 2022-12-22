@@ -23,14 +23,16 @@ So again, your options are:
 - The [Desktop CliTool](https://github.com/Itz-Hyperz/firewallgg/releases)
 
 ## Step Two - Use / Integrate
-For the basics, using the [Website](https://firewall.hyperz.net) or the [Desktop Process](https://github.com/Itz-Hyperz/firewallgg/releases) is pretty straight forward. Simple open one and enter a Discord User Id.
+For the basics, using the [Website](https://firewall.hyperz.net) or the [Desktop Process](https://github.com/Itz-Hyperz/firewallgg/releases) is pretty straight forward. Simply open one and enter a Discord User Id.
 
 On the other hand, integrating it into your system may be a little bit more difficult. Most of our target audience uses FaxStore. So, if you're looking to easily integrate, look no-further than our built-in FaxStore extension that can be found [here](#input).
 
 Yet, if you are entirely on your own, feel free to reference our public documentation for our Node Module [here](https://npmjs.com/package/firewallgg) or for our Web API you can look [here](https://firewall.hyperz.net/api).
 
 ## API Object Structure
-Below is what gets returned from the physical API:
+This is where you can look to add your own database into the FirewallGG Middleware!
+
+Below is what gets returned from our API upon making a request:
 ```json
 [
     {
@@ -48,7 +50,7 @@ Below is what gets returned from the physical API:
 ]
 ```
 
-You need to build your API endpoint to return a JSON object with these values as the *only returning values*.
+You need to build your database API endpoint to return a JSON object with these keys as the *only returning keys*.
 ```json
 {
   "active": yourObject.active,
