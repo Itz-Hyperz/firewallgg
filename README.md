@@ -1,6 +1,6 @@
 # FirewallGG
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-15-blue.svg)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-16-blue.svg)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <img align="right" height="60" width="60" alt="" src="https://github.com/Itz-Hyperz/firewallgg/blob/main/website/public/assets/logo.png?raw=true" />
 
@@ -92,6 +92,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center"><a href="https://github.com/codenationgroup"><img src="https://avatars.githubusercontent.com/u/66074938?v=4?s=100" width="100px;" alt="codenationgroup"/><br /><sub><b>codenationgroup</b></sub></a><br /><a href="#ideas-codenationgroup" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-codenationgroup" title="Tools">🔧</a></td>
+      <td align="center"><a href="https://github.com/Paradise-Solutions"><img src="https://avatars.githubusercontent.com/u/119133649?v=4?s=100" width="100px;" alt="Paradise Solutions"/><br /><sub><b>Paradise Solutions</b></sub></a><br /><a href="#ideas-Paradise-Solutions" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-Paradise-Solutions" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>
