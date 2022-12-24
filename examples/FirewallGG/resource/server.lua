@@ -9,6 +9,8 @@ local function playerIsBanned(banId, source)
         local banSuffix = "You can find more information about your ban at https://firewall.hyperz.net/search/" .. id
         local kickMessage = Config.KickReason
 
+        Citizen.Wait(15000)
+
         if(Config.UseCustomKick == false) then
             DropPlayer(source, banPrefix .. " You are banned from a FirewallGG ban database. To protect this server, you are unable to join the server. " .. banSuffix)
         else
@@ -39,8 +41,7 @@ end
 local function checkBanned(discord, idig)
 
     local api = "https://firewall.hyperz.net/api/checkusersimple/"
-    --local target = discord
-    local target = 386421496463097857
+    local target = discord
 
     PerformHttpRequest(api .. target, function(errorCode, resultData, resultHeaders)
 
