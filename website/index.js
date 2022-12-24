@@ -166,6 +166,16 @@ app.get('/api/checkuser/:userid', async function(req, res) {
     };
 });
 
+app.get('/api/checkusersimple/:userid', async function(req, res) {
+	if(!req.params.userid) return res.type('json').send(JSON.stringify({ active: false }, null, 4) + '\n');
+	let check = await firewallgg.search(req.params.userid)
+	if(check[0]) {
+		return res.type('json').send(JSON.stringify({ active: true }, null, 4) + '\n');
+	} else {
+		return res.type('json').send(JSON.stringify({ active: false }, null, 4) + '\n');
+	};
+});
+
 app.get('/api/generatekey', backend.checkAuth, async function(req, res) {
     let parsed = await JSON.parse(fs.readFileSync('./apikeys.json'));
     let newKey = await backend.generateRandom(34);
