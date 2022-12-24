@@ -21,6 +21,7 @@ So again, your options are:
 - The [Node Module](https://npmjs.com/package/firewallgg)
 - The [Web API](https://firewall.hyperz.net/api).
 - The [Desktop CliTool](https://github.com/Itz-Hyperz/firewallgg/releases)
+- The [FiveM Resource](https://github.com/Itz-Hyperz/firewallgg/tree/main/examples/FirewallGG-FiveM)
 
 ## Step Two - Use / Integrate
 For the basics, using the [Website](https://firewall.hyperz.net) or the [Desktop Process](https://github.com/Itz-Hyperz/firewallgg/releases) is pretty straight forward. Simply open one and enter a Discord User Id.
