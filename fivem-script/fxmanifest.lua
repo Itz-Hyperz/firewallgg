@@ -1,13 +1,12 @@
+----------------------------------------------------------------
+-- API Ban Sync - A Simple FiveM Script, Made By Jordan.#2139 --
+----------------------------------------------------------------
+
 fx_version 'cerulean'
 games { 'gta5' }
-author 'Jordan.#2139'
-client_scripts {
-
-}
+author 'Jordan.2139'
 
 server_scripts {
-    'server.lua',
-}
-shared_scripts {
-    'config.lua'
+    'config.lua',
+    'server.lua'
 }

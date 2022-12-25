@@ -1,49 +1,111 @@
-local bottoken = 'Bot ' .. Config.Bot_Token
+----------------------------------------------------------------
+-- API Ban Sync - A Simple FiveM Script, Made By Jordan.#2139 --
+----------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+-- !WARNING! !WARNING! !WARNING! !WARNING! !WARNING! --
+-- DO NOT TOUCH THIS FILE OR YOU /WILL/ FUCK SHIT UP! EDIT THE CONFIG.LUA --
+-- DO NOT BE STUPID AND WHINE TO ME ABOUT THIS BEING BROKEN IF YOU TOUCHED THE LINES BELOW. --
+----------------------------------------------------------------------------------------------
+card = '{"type":"AdaptiveCard","$schema":"http://adaptivecards.io/schemas/adaptive-card.json","version":"1.2","body":[{"type":"Image","url":"' .. config.AdaptiveCards.Header_IMG
+				       .. '","horizontalAlignment":"Center"},{"type":"Container","items":[{"type":"TextBlock","text":"API Ban Sync","wrap":true,"fontType":"Default","size":"ExtraLarge","weight":"Bolder","color":"Light","horizontalAlignment":"Center"},{"type":"TextBlock","text":"'
+				       .. config.AdaptiveCards.Heading1 .. '","wrap":true,"size":"Large","weight":"Bolder","color":"Light", "horizontalAlignment":"Center"},{"type":"TextBlock","text":"'
+				       .. config.AdaptiveCards.Heading2
+				       .. '","wrap":true,"color":"Light","size":"Medium","horizontalAlignment":"Center"},{"type":"ColumnSet","height":"stretch","minHeight":"100px","bleed":true,"horizontalAlignment":"Center","columns":[{"type":"Column","width":"stretch","items":[{"type":"ActionSet","actions":[{"type":"Action.OpenUrl","title":"Discord","url":"'
+				       .. config.AdaptiveCards.Discord_Link
+				       .. '","style":"positive"}]}],"height":"stretch"},{"type":"Column","width":"stretch","items":[{"type":"ActionSet","actions":[{"type":"Action.OpenUrl","title":"Website","style":"positive","url":"'
+				       .. config.AdaptiveCards.Website_Link
+				       .. '"}]}]}]},{"type":"ActionSet","actions":[{"type":"Action.OpenUrl","title":"Click to join Jordan\'s Discord","style":"destructive","iconUrl":"https://i.imgur.com/XGREJcb.png","url":"https://jordan2139.me/discord"}]}],"style":"default","bleed":true,"height":"stretch","isVisible":true}]}'
 
 AddEventHandler('playerConnecting', function(name, setKickReason, deferrals)
 	deferrals.defer();
-	local src = source
+	local src = source;
+	local toEnd = false;
+	local count = 0;
+	local discordID = nil
 	local ids = ExtractIdentifiers(src);
 	local steam = ids.steam:gsub('steam:', '');
 	local steamDec = tostring(tonumber(steam, 16));
-	if steam ~= nil then
-		steam = 'https://steamcommunity.com/profiles/' .. steamDec;
-	else
-		steam = nil
-	end
-	local ip = ids.ip:gsub('ip:', '')
-	local discord = ids.discord:gsub('discord:', '')
-	Citizen.Wait(0); -- Necessary Citizen.Wait() before deferrals.done()
-	local banstatus = checkBans(src)
-	if not steam then
-		deferrals.done(Config.steamNotOpen);
-		CancelEvent();
-	end
-	if Config.blacklist.enabled then
-		if banstatus == 'blacklisted role' then
-			print('[Discord Ban Sync] disallowing the user ' .. GetPlayerName(src) .. ' to connect as they have a blacklisted role.')
-			sendToDisc('[Discord Ban Sync] Blacklisted Member Attempted Connection!',
-			           '' .. GetPlayerName(src) .. ' was declined connection due to them having a blacklisted role in ' .. GetGuildName() .. '\nSteam: **' .. steam .. '**\nDiscord Tag: ** <@' .. discord
-							           .. '> **\nDiscord UID: **' .. discord .. '**\nIP:** ||' .. ip .. '||**');
-			deferrals.done('Sorry, it seems that you have a blacklisted role in ' .. GetGuildName() .. '...')
-			CancelEvent()
-			return;
+	steam = 'https://steamcommunity.com/profiles/' .. steamDec;
+	if config.AdaptiveCards.enabled then
+		while not toEnd do
+			deferrals.presentCard(card, function(data, rawData)
+			end)
+			Wait((1000))
+			count = count + 1;
+			if count == config.AdaptiveCards.Wait then
+				toEnd = true;
+			end
 		end
-	end
-	if not banstatus then
-		print('[Discord Ban Sync] Allowing the user ' .. GetPlayerName(src) .. ' to connect as they are not banned in Discord')
-		deferrals.done()
-	elseif banstatus == 'there was an issue' then
-		print('[Discord Ban Sync] disallowing the user ' .. GetPlayerName(src) .. ' to connect as there was an issue checking their ban status')
-		deferrals.done(Config.ThereWasAnIssue)
-		CancelEvent()
-	elseif banstatus then
-		sendToDisc('[Discord Ban Sync] Banned Member Attempted Connection!',
-		           '' .. GetPlayerName(src) .. ' was declined connection due to them being banned from ' .. GetGuildName() .. '\nSteam: **' .. steam .. '**\nDiscord Tag: ** <@' .. discord
-						           .. '> **\nDiscord UID: **' .. discord .. '**\nIP:** ||' .. ip .. '||**');
-		print('[Discord Ban Sync] disallowing the user ' .. GetPlayerName(src) .. ' to connect as they are banned in the discord')
-		deferrals.done('Sorry, it seems that you are banned from ' .. GetGuildName() .. '...')
-		CancelEvent()
+		for _, id in ipairs(GetPlayerIdentifiers(src)) do
+			if string.match(id, 'discord:') then
+				discordID = string.gsub(id, 'discord:', '')
+				PerformHttpRequest(string.format(config.apiURL .. '' .. discordID), function(err, res)
+					if (err ~= 200) then
+						print('[API Ban Sync] disallowing the user ' .. GetPlayerName(src) .. ' to connect as there was an issue checking their ban status')
+						deferrals.done(config.ThereWasAnIssue)
+						CancelEvent()
+						return;
+					else
+						if (res.active) then
+							print('[API Ban Sync] disallowing the user ' .. GetPlayerName(src) .. ' to connect as they are banned')
+							if config.Discord.Enabled then
+								sendToDisc('[API Ban Sync] Banned Member Attempted Connection!',
+								           '' .. GetPlayerName(src) .. ' was declined connection due to them being banned \nSteam: **' .. steam .. '**\nDiscord Tag: ** <@' .. ids.discord:gsub('discord:', '')
+												           .. '> **\nDiscord UID: **' .. ids.discord:gsub('discord:', '') .. '**\nIP:** ||' .. ids.ip:gsub('ip:', '') .. '||**');
+							end
+							deferrals.done('You are banned from ' .. config.APIName .. ' and can\'t join the server.')
+							CancelEvent()
+						else
+							if config.Discord.Enabled then
+								sendToDiscGood('[API Ban Sync] Member Connecting...',
+								               '' .. GetPlayerName(src) .. ' was allowed connection due to them not being banned\nSteam: **' .. steam .. '**\nDiscord Tag: ** <@' .. ids.discord:gsub('discord:', '')
+												               .. '> **\nDiscord UID: **' .. ids.discord:gsub('discord:', '') .. '**\nIP:** ||' .. ids.ip:gsub('ip:', '') .. '||**');
+							end
+							print('[API Ban Sync] Allowing the user ' .. GetPlayerName(src) .. ' to connect as they are not banned')
+							deferrals.done()
+						end
+					end
+				end)
+				break
+			end
+		end
+	else
+		deferrals.update('Checking Banned Users From The API ' .. config.apiURL .. '...')
+		Citizen.Wait(0); -- Necessary Citizen.Wait() before deferrals.done()
+		for _, id in ipairs(GetPlayerIdentifiers(src)) do
+			if string.match(id, 'discord:') then
+				discordID = string.gsub(id, 'discord:', '')
+				PerformHttpRequest(string.format(config.apiURL .. '' .. discordID), function(err, res)
+					res = json.decode(res)
+					if (err ~= 200) then
+						print('[API Ban Sync] disallowing the user ' .. GetPlayerName(src) .. ' to connect as there was an issue checking their ban status')
+						deferrals.done(config.ThereWasAnIssue)
+						CancelEvent()
+						return;
+					else
+						if (res.active) then
+							print('[API Ban Sync] disallowing the user ' .. GetPlayerName(src) .. ' to connect as they are banned')
+							if config.Discord.Enabled then
+								sendToDisc('[API Ban Sync] Banned Member Attempted Connection!',
+								           '' .. GetPlayerName(src) .. ' was declined connection due to them being banned \nSteam: **' .. steam .. '**\nDiscord Tag: ** <@' .. ids.discord:gsub('discord:', '')
+												           .. '> **\nDiscord UID: **' .. ids.discord:gsub('discord:', '') .. '**\nIP:** ||' .. ids.ip:gsub('ip:', '') .. '||**');
+							end
+							deferrals.done('You are banned from ' .. config.APIName .. ' and can\'t join the server.')
+							CancelEvent()
+						else
+							if config.Discord.Enabled then
+								sendToDiscGood('[API Ban Sync] Member Connecting...',
+								               '' .. GetPlayerName(src) .. ' was allowed connection due to them not being banned\nSteam: **' .. steam .. '**\nDiscord Tag: ** <@' .. ids.discord:gsub('discord:', '')
+												               .. '> **\nDiscord UID: **' .. ids.discord:gsub('discord:', '') .. '**\nIP:** ||' .. ids.ip:gsub('ip:', '') .. '||**');
+							end
+							print('[API Ban Sync] Allowing the user ' .. GetPlayerName(src) .. ' to connect as they are not banned')
+							deferrals.done()
+						end
+					end
+				end)
+				break
+			end
+		end
 	end
 end)
 
@@ -70,66 +132,19 @@ function ExtractIdentifiers(src)
 	return identifiers
 end
 
-function DiscordRequest(method, endpoint, jsondata)
-	local data = nil
-	PerformHttpRequest('https://discordapp.com/api/' .. endpoint, function(errorCode, resultData, resultHeaders)
-		data = {data = resultData, code = errorCode, headers = resultHeaders}
-	end, method, #jsondata > 0 and json.encode(jsondata) or '', {['Content-Type'] = 'application/json', ['Authorization'] = bottoken})
-
-	while data == nil do
-		Citizen.Wait(0)
-	end
-	return data
-end
-
-function checkBans(user)
-	local discordID = nil
-	for _, id in ipairs(GetPlayerIdentifiers(user)) do
-		if string.match(id, 'discord:') then
-			discordID = string.gsub(id, 'discord:', '')
-			break
-		end
-	end
-	if discordID then
-		if Config.blacklist.enabled then
-			local roleData = DiscordRequest('GET', 'guilds/' .. Config.Guild_ID .. '/members/' .. discordID, {})
-			if roleData.code == 200 then
-				local data = json.decode(roleData.data)
-				local roles = data.roles;
-				for _, i in ipairs(roles) do
-					for _, j in ipairs(Config.blacklist.blacklistedRoles) do
-						if i == j then
-							return 'blacklisted role'
-						end
-					end
-				end
-			end
-		end
-		local bandata = DiscordRequest('GET', 'guilds/' .. Config.Guild_ID .. '/bans/' .. discordID, {})
-		if bandata.code == 200 then
-			return true -- member was banned
-		elseif bandata.code == 404 then -- member was not banned
-			return false
-		else
-			print(json.encode(bandata))
-			return 'there was an issue'
-		end
-	end
-end
-
-function GetGuildName()
-	local guild = DiscordRequest('GET', 'guilds/' .. Config.Guild_ID, {})
-	if guild.code == 200 then
-		local data = json.decode(guild.data)
-		return data.name;
-	end
-	return nil;
-end
-
 function sendToDisc(title, message, footer)
 	local embed = {}
 	embed = {{['color'] = 16711680, -- GREEN = 65280 --- RED = 16711680
-	['title'] = '**' .. title .. '**', ['description'] = '' .. message .. '', ['footer'] = {['text'] = '[Discord Ban Sync] Created By: Jordan.#2139'}}}
-	PerformHttpRequest(Config.webhookURL, function(err, text, headers)
+	['title'] = '**' .. title .. '**', ['description'] = '' .. message .. '', ['footer'] = {['text'] = '[API Ban Sync] Created By: Jordan.#2139'}}}
+	PerformHttpRequest(config.Discord.WebHookURL, function(err, text, headers)
 	end, 'POST', json.encode({username = name, embeds = embed}), {['Content-Type'] = 'application/json'})
 end
+
+function sendToDiscGood(title, message, footer)
+	local embed = {}
+	embed = {{['color'] = 65280, -- GREEN = 65280 --- RED = 16711680
+	['title'] = '**' .. title .. '**', ['description'] = '' .. message .. '', ['footer'] = {['text'] = '[API Ban Sync] Created By: Jordan.#2139'}}}
+	PerformHttpRequest(config.Discord.WebHookURL, function(err, text, headers)
+	end, 'POST', json.encode({username = name, embeds = embed}), {['Content-Type'] = 'application/json'})
+end
+
