@@ -1,6 +1,6 @@
-# API-Ban-Sync
+# FirewallGG-Ban-Sync
 ## What is it? 
-API-Ban-Sync is a highly advanced FiveM script that will let you rest assured knowing that those trolls that you banned from your discord won't go and troll your FiveM server. This script will check against your API of choice (it is designed to work with the [Protect The Developers](https://protectthedevs.com) API so there is a chance it may require some editing to work with yours. This script is highly optimized and works flawlessly. This script also includes ***Adaptive Cards*** as well
+API-Ban-Sync is a highly advanced FiveM script that will let you rest assured knowing that those trolls that you banned from your discord won't go and troll your FiveM server. This script will check against your API of choice (it is designed to work with the [FirewallGG](https://firewall.hyperz.net) API so there is a chance it may require some editing to work with yours. This script is highly optimized and works flawlessly. This script also includes ***Adaptive Cards*** as well
 
 ## Configuration 
 ```
