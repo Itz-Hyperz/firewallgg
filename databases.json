@@ -32,7 +32,7 @@
 	{
 		"name": "StrongerTogether",
 		"themeColor": "#FE3A06",
-		"logoUrl": "https://strongertogether.network/assets/logo.png",
+		"logoUrl": "https://strongertogether.network/static/img/big-logo.png",
 		"active": true,
 		"requestUrl": "https://api.strongertogether.network/firewallgg/checkuser/",
 		"method": "get",
