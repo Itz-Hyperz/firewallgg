@@ -34,7 +34,7 @@
 		"themeColor": "#FE3A06",
 		"logoUrl": "https://strongertogether.network/static/img/big-logo.png",
 		"active": true,
-		"requestUrl": "https://api.strongertogether.network/firewallgg/checkuser/",
+		"requestUrl": "https://strongertogether.network/api/v1/firewallgg/checkuser/",
 		"method": "get",
 		"appealLink": "https://strongertogether.network",
 		"otherData": {}
