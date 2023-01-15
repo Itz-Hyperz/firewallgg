@@ -22,7 +22,7 @@ func main() {
 	provUserId = strings.Replace(provUserId, "\r", "", -1)
 	fmt.Println("----- SEARCHING -----")
 	// Make the HTTP Get Request
-   	resp, err := http.Get("https://firewall.hyperz.net/api/checkuser/" + provUserId)
+   	resp, err := http.Get("https://firewall.bosssoftware.net/api/checkuser/" + provUserId)
    	if err != nil {
     	fmt.Println(err)
    	}
