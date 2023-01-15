@@ -118,7 +118,7 @@ app.get('/api/checkuser/:userid', async function(req, res) {
                 count++
                 if(database.active) {
                     let themeColor = database.themeColor || '#FFFFFF';
-                    let logoUrl = database.logoUrl || 'https://firewall.hyperz.net/assets/logo.png';
+                    let logoUrl = database.logoUrl || 'https://firewall.bosssoftware.net/assets/logo.png';
                     let appealLink = database.appealLink || '#';
                     let data = await makeRequest(database, userId);
                     let _json = "STRING";
