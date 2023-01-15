@@ -10,7 +10,7 @@ async function postBan(userId, userTag, databaseName, banReason, banProof) {
     if(typeof providedToken == 'undefined') return console.log('FirewallGG requires a token to post a ban, use .setToken("YOUR_API_TOKEN") before utilising postBan.');
     const fetch = await axios({
         method: 'POST',
-        url: 'https://firewall.hyperz.net/api/postban',
+        url: 'https://firewall.bosssoftware.net/api/postban',
         headers: {
             Accept: 'application/json, text/plain, */*',
             'User-Agent': '*',
@@ -31,7 +31,7 @@ async function search(userId) {
     if(typeof userId == 'undefined') console.log('No userId was defined in FirewallGG NPM request.')
     let listFetch = await axios({
         method: 'get',
-        url: `https://firewall.hyperz.net/api/checkuser/${userId}`
+        url: `https://firewall.bosssoftware.net/api/checkuser/${userId}`
     });
     return listFetch.data;
 };
