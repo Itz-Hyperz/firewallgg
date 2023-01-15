@@ -1,15 +1,5 @@
 [
 	{
-		"name": "HD | Blacklists",
-		"themeColor": "#144B9D",
-		"logoUrl": "https://cdn.hyperz.net/u/main/vJohEi4.png",
-		"active": true,
-		"requestUrl": "https://bans.hyperz.net/firewallgg/checkuser/",
-		"method": "get",
-		"appealLink": "https://store.hyperz.net/discord",
-		"otherData": {}
-	},
-	{
 		"name": "Stop The Resellers",
 		"themeColor": "#DB6574",
 		"logoUrl": "https://stoptheresellers.com/assets/images/logo.png",
