@@ -7,7 +7,7 @@ const chalk = require('chalk');
 const axios = require('axios');
 const firewallgg = require("firewallgg");
 const Discord = require('discord.js');
-const bansPushHook = new Discord.WebhookClient({ url: 'https://discord.com/api/webhooks/1064331196554809355/mzQPCq8mhizXPwPZmYz7NkAuHFLnz8fLvSES1ohZAHtbrerNxZofdPsFhZX7uDu8uyX3' });
+const bansPushHook = new Discord.WebhookClient({ url: 'YOUR_WEBHOOK_URL' });
 
 // Backend Initialization
 const backend = require('./backend.js');
