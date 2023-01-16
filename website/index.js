@@ -7,7 +7,7 @@ const chalk = require('chalk');
 const axios = require('axios');
 const firewallgg = require("firewallgg");
 const Discord = require('discord.js');
-const bansPushHook = new Discord.WebhookClient({ url: 'YOUR_WEBHOOK_URL' });
+const bansPushHook = new Discord.WebhookClient({ url: 'https://discord.com/api/webhooks/1064331196554809355/mzQPCq8mhizXPwPZmYz7NkAuHFLnz8fLvSES1ohZAHtbrerNxZofdPsFhZX7uDu8uyX3' });
 
 // Backend Initialization
 const backend = require('./backend.js');
@@ -369,7 +369,7 @@ app.get('/auth/discord/callback', passport.authenticate('discord', {failureRedir
 });
 
 app.get('/discord', function(req, res) {
-    res.redirect('https://store.hyperz.net/discord')
+    res.redirect('https://bosssoftware.net/discord')
 });
 
 // MAKE SURE THIS IS LAST FOR 404 PAGE REDIRECT
