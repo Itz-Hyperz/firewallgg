@@ -249,6 +249,43 @@ pre code {
     word-wrap: break-word;
 }
 
+.trusted-div {
+    border-color: #5865F2;
+    background-color: #070F26;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 0.4em;
+    padding: 1em;
+}
+
+.trusted-logo {
+    width: 8em;
+    height: auto;
+    border-radius: 50%;
+    border-color: #5865F2;
+    border-style: solid;
+    border-width: 3px;
+    background-color: #5865f231;
+    margin-bottom: 1em;
+}
+
+.trusted-name {
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.trusted-badge {
+    color: #5865F2 !important;
+}
+
+.trusted-anchor {
+    transition: background-color 250ms ease-in-out;
+}
+
+.trusted-anchor:hover {
+    background-color: #5865f2c4 !important;
+}
+
 /* Scrollbar */
 /* width */
 ::-webkit-scrollbar {
