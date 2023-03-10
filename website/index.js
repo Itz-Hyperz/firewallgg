@@ -8,6 +8,7 @@ const axios = require('axios');
 const firewallgg = require("firewallgg");
 const Discord = require('discord.js');
 const bansPushHook = new Discord.WebhookClient({ url: 'YOUR_WEBHOOK_URL' });
+const crypto = require("crypto");
 
 // Backend Initialization
 const backend = require('./backend.js');
@@ -186,7 +187,7 @@ app.get('/api/checkusersimple/:userid', async function(req, res) {
 
 app.get('/api/generatekey', backend.checkAuth, async function(req, res) {
     let parsed = await JSON.parse(fs.readFileSync('./apikeys.json'));
-    let newKey = await backend.generateRandom(34);
+    let newKey = crytpo.randomUUID()
     let check = parsed.filter(a => a.userId == req.session.passport.user.id)[0];
     let newArray = [];
     if(check) {
