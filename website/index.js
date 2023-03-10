@@ -95,6 +95,14 @@ app.post('/backend/search', async function(req, res) {
     res.redirect(`/search/${req.body.userid}`)
 })
 
+app.get('/trusted', async function(req, res) {
+    let request = await axios({
+        method: 'get',
+        url: `https://raw.githubusercontent.com/Itz-Hyperz/firewallgg/main/trusted.json`
+    });
+    res.render('trusted.ejs', { loggedIn: req.isAuthenticated(), trusted: request?.data });
+});
+
 app.get('/api', async function(req, res) {
     res.render('api.ejs', { loggedIn: req.isAuthenticated() });
 });
