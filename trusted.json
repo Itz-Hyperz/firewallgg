@@ -70,9 +70,24 @@
     "logourl": "https://firemodifications.com/assets/logo.png"
   },
   {
+    "name": "Zeakor Designs",
+    "url": "https://zeakor.com",
+    "logourl": "https://i.imgur.com/J0JARJC.png"
+  },
+  {
     "name": "Xolify Dev.",
     "url": "https://xolify.store",
     "logourl": "https://xolify.store/assets/logo.png"
+  },
+  {
+    "name": "Pyro's Shop",
+    "url": "https://pyrosdevshop.com",
+    "logourl": "https://cdn.shopify.com/s/files/1/0706/4911/9003/files/Logo_Clear.png?v=1676315688&width=500"
+  },
+  {
+    "name": "Xen Dev.",
+    "url": "https://xendevelopment.net",
+    "logourl": "https://cdn.discordapp.com/attachments/1026194016229929041/1026202716772503652/Xen_Transparent.png"
   },
   {
     "name": "Husky Mods",
