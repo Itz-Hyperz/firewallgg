@@ -28,35 +28,5 @@
 		"method": "get",
 		"appealLink": "https://strongertogether.network",
 		"otherData": {}
-	},
-	{
-    		"name": "LeakGuard",
-    		"themeColor": "#009CFE",
-    		"logoUrl": "https://cdn.hyperz.net/u/main/qYD0eMD.png",
-    		"active": true,
-    		"requestUrl": "http://158.69.145.132:3000/firewallgg/checkuser/",
-    		"method": "get",
-    		"appealLink": "https://leakguard.net",
-    		"otherData": {}
-  	},
-	{
-		"name": "Sentinel",
-		"themeColor": "#fc7a02",
-		"logoUrl": "https://cdn.hyperz.net/u/main/vSISoFR.jpg",
-		"active": true,
-		"requestUrl": "https://sentinelbot.xyz/firewallgg/checkuser/",
-		"method": "get",
-		"appealLink": "https://sentinelbot.xyz/appeal",
-		"otherData": {}
-	},
-	{
-		"name": "GG Protection",
-		"themeColor": "#3d8a52",
-		"logoUrl": "https://cdn.hyperz.net/u/main/2q3RqCD.png",
-		"active": true,
-		"requestUrl": "https://ggprotection.xyz/firewallgg/checkuser/",
-		"method": "get",
-		"appealLink": "https://ggprotection.xyz/appeal",
-		"otherData": {}
 	}
 ]
