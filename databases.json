@@ -28,5 +28,15 @@
 		"method": "get",
 		"appealLink": "https://strongertogether.network",
 		"otherData": {}
+	},
+	{	
+		"name": "SpeedBans",
+		"themeColor": "#0000FF",
+		"logoUrl": "https://i.imgur.com/yOttfRC.png",
+		"active": true,
+		"requestUrl": "https://speedbans.xyz/firewallgg/checkuser/",
+		"method": "get",
+		"appealLink": "https://speedbans.xyz/appeal",
+		"otherData": {}
 	}
 ]
