@@ -14,21 +14,21 @@ FirewallGG is a *background-checking* tool. What it will allow you to do, is che
 FirewallGG is **both** *client sided* and *server sided*. What this means is users on any platform can now use FirewallGG to it's fullest capabilities. From a backend database background check on users, to a website for ease of access anywhere, all the way out to a desktop process that will allow you to run user Ids and get a return on them easily.
 
 ## Step One - Pick a method
-First, you need to find out just which method will best suit your needs for using FirewallGG. If you're just trying to check a users background history, maybe just the website will be enough for you, but if you're looking for something a little more backend wise, possibly the [Node Module](https://npmjs.com/package/firewallgg) will be more your style. If none of these suit your needs, you can always just use our REST API [here](https://firewall.astrolabs.net/api).
+First, you need to find out just which method will best suit your needs for using FirewallGG. If you're just trying to check a users background history, maybe just the website will be enough for you, but if you're looking for something a little more backend wise, possibly the [Node Module](https://npmjs.com/package/firewallgg) will be more your style. If none of these suit your needs, you can always just use our REST API [here](https://firewall.hyperz.world/api).
 
 So again, your options are:
-- The [Website](https://firewall.astrolabs.net).
+- The [Website](https://firewall.hyperz.world).
 - The [Node Module](https://npmjs.com/package/firewallgg)
-- The [Web API](https://firewall.astrolabs.net/api).
+- The [Web API](https://firewall.hyperz.world/api).
 - The [Desktop CliTool](https://github.com/Itz-Hyperz/firewallgg/releases)
 - The [FiveM Resource](https://github.com/Itz-Hyperz/firewallgg/tree/main/examples/FirewallGG-FiveM)
 
 ## Step Two - Use / Integrate
-For the basics, using the [Website](https://firewall.astrolabs.net) or the [Desktop Process](https://github.com/Itz-Hyperz/firewallgg/releases) is pretty straight forward. Simply open one and enter a Discord User Id.
+For the basics, using the [Website](https://firewall.hyperz.world) or the [Desktop Process](https://github.com/Itz-Hyperz/firewallgg/releases) is pretty straight forward. Simply open one and enter a Discord User Id.
 
 On the other hand, integrating it into your system may be a little bit more difficult. Most of our target audience uses FaxStore. So, if you're looking to easily integrate, look no-further than our built-in FaxStore extension that can be found [here](#input).
 
-Yet, if you are entirely on your own, feel free to reference our public documentation for our Node Module [here](https://npmjs.com/package/firewallgg) or for our Web API you can look [here](https://firewall.astrolabs.net/api).
+Yet, if you are entirely on your own, feel free to reference our public documentation for our Node Module [here](https://npmjs.com/package/firewallgg) or for our Web API you can look [here](https://firewall.hyperz.world/api).
 
 ## API Object Structure
 This is where you can look to add your own database into the FirewallGG Middleware!
@@ -74,7 +74,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center"><a href="https://astrolabs.net"><img src="https://avatars.githubusercontent.com/u/69090660?v=4?s=100" width="100px;" alt="Itz-Hyperz"/><br /><sub><b>Itz-Hyperz</b></sub></a><br /><a href="https://github.com/Itz-Hyperz/firewallgg/issues?q=author%3AItz-Hyperz" title="Bug reports">🐛</a> <a href="#business-Itz-Hyperz" title="Business development">💼</a> <a href="https://github.com/Itz-Hyperz/firewallgg/commits?author=Itz-Hyperz" title="Code">💻</a> <a href="https://github.com/Itz-Hyperz/firewallgg/commits?author=Itz-Hyperz" title="Documentation">📖</a> <a href="#security-Itz-Hyperz" title="Security">🛡️</a> <a href="https://github.com/Itz-Hyperz/firewallgg/pulls?q=is%3Apr+reviewed-by%3AItz-Hyperz" title="Reviewed Pull Requests">👀</a></td>
+      <td align="center"><a href="https://hyperz.world"><img src="https://avatars.githubusercontent.com/u/69090660?v=4?s=100" width="100px;" alt="Itz-Hyperz"/><br /><sub><b>Itz-Hyperz</b></sub></a><br /><a href="https://github.com/Itz-Hyperz/firewallgg/issues?q=author%3AItz-Hyperz" title="Bug reports">🐛</a> <a href="#business-Itz-Hyperz" title="Business development">💼</a> <a href="https://github.com/Itz-Hyperz/firewallgg/commits?author=Itz-Hyperz" title="Code">💻</a> <a href="https://github.com/Itz-Hyperz/firewallgg/commits?author=Itz-Hyperz" title="Documentation">📖</a> <a href="#security-Itz-Hyperz" title="Security">🛡️</a> <a href="https://github.com/Itz-Hyperz/firewallgg/pulls?q=is%3Apr+reviewed-by%3AItz-Hyperz" title="Reviewed Pull Requests">👀</a></td>
       <td align="center"><a href="https://xolify.store/"><img src="https://avatars.githubusercontent.com/u/103285682?v=4?s=100" width="100px;" alt="XolifyDev"/><br /><sub><b>XolifyDev</b></sub></a><br /><a href="#ideas-XolifyDev" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-XolifyDev" title="Tools">🔧</a></td>
       <td align="center"><a href="https://github.com/sandwichthedev"><img src="https://avatars.githubusercontent.com/u/69737561?v=4?s=100" width="100px;" alt="sandwichthedev"/><br /><sub><b>sandwichthedev</b></sub></a><br /><a href="#ideas-sandwichthedev" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-sandwichthedev" title="Tools">🔧</a> <a href="https://github.com/Itz-Hyperz/firewallgg/issues?q=author%3Asandwichthedev" title="Bug reports">🐛</a></td>
       <td align="center"><a href="https://zedofficial.xyz/"><img src="https://avatars.githubusercontent.com/u/61573331?v=4?s=100" width="100px;" alt="ZED Official"/><br /><sub><b>ZED Official</b></sub></a><br /><a href="#ideas-zedofficial" title="Ideas, Planning, & Feedback">🤔</a> <a href="#tool-zedofficial" title="Tools">🔧</a></td>
