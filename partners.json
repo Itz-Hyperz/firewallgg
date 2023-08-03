@@ -1,8 +1,13 @@
 [
 	{
-		"name": "Boss Software",
-		"logo": "https://cdn.discordapp.com/attachments/1062589135786872883/1063900187338227833/BossTextHalf.png",
-		"url": "https://bosssoftware.net"
+		"name": "Hyperz World",
+		"logo": "https://hyperz.world/assets/logo.png",
+		"url": "https://hyperz.world"
+	},
+	{
+		"name": "Astro Labs",
+		"logo": "https://astrolabs.net/assets/logo.png",
+		"url": "https://astrolabs.net"
 	},
 	{
 		"name": "Hyperz Dev.",
