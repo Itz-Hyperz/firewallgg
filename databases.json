@@ -10,16 +10,6 @@
 		"otherData": {}
 	},
 	{
-		"name": "Global Bans",
-		"themeColor": "#212529",
-		"logoUrl": "https://www.gbans.xyz/static/media/logo.a8758119a29feafd991c.png",
-		"active": true,
-		"requestUrl": "https://globalbansapi.xyz/firewallgg/checkuser/",
-		"method": "get",
-		"appealLink": "https://www.gbans.xyz/discord",
-		"otherData": {}
-	},
-	{
 		"name": "StrongerTogether",
 		"themeColor": "#FE3A06",
 		"logoUrl": "https://strongertogether.network/static/img/big-logo.png",
