@@ -10,13 +10,13 @@
 		"otherData": {}
 	},
 	{
-		"name": "StrongerTogether",
-		"themeColor": "#FE3A06",
-		"logoUrl": "https://strongertogether.network/static/img/big-logo.png",
+		"name": "TrollGuard",
+		"themeColor": "#8F2AFF",
+		"logoUrl": "https://trollguard.hyperz.world/assets/logo.png",
 		"active": true,
-		"requestUrl": "https://strongertogether.network/api/v1/firewallgg/checkuser/",
+		"requestUrl": "https://trollguard.hyperz.world/firewallgg/checkuser/",
 		"method": "get",
-		"appealLink": "https://strongertogether.network",
+		"appealLink": "https://trollguard.hyperz.world",
 		"otherData": {}
 	},
 	{	
