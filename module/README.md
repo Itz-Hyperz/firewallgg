@@ -1,3 +1,5 @@
+# THIS HAS BEEN DISCONTUNUED!
+
 # FirewallGG - Node Module
 This is a simple node module that will allow you to search the FirewallGG database(s) natively.
 
