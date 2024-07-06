@@ -1,3 +1,11 @@
+// API HAS BEEN DISCONTUNUED!!! THIS NO LONGER WORKS!!!
+// API HAS BEEN DISCONTUNUED!!! THIS NO LONGER WORKS!!!
+// API HAS BEEN DISCONTUNUED!!! THIS NO LONGER WORKS!!!
+// API HAS BEEN DISCONTUNUED!!! THIS NO LONGER WORKS!!!
+// API HAS BEEN DISCONTUNUED!!! THIS NO LONGER WORKS!!!
+// API HAS BEEN DISCONTUNUED!!! THIS NO LONGER WORKS!!!
+// API HAS BEEN DISCONTUNUED!!! THIS NO LONGER WORKS!!!
+
 const axios = require('axios');
 let providedToken = undefined;
 
@@ -33,7 +41,8 @@ async function search(userId) {
         method: 'get',
         url: `https://firewall.hyperz.world/api/checkuser/${userId}`
     });
-    return listFetch.data;
+    // return listFetch.data;
+    return [];
 };
 
 module.exports = {
@@ -41,3 +50,11 @@ module.exports = {
     postBan: postBan,
     search: search
 }
+
+// API HAS BEEN DISCONTUNUED!!! THIS NO LONGER WORKS!!!
+// API HAS BEEN DISCONTUNUED!!! THIS NO LONGER WORKS!!!
+// API HAS BEEN DISCONTUNUED!!! THIS NO LONGER WORKS!!!
+// API HAS BEEN DISCONTUNUED!!! THIS NO LONGER WORKS!!!
+// API HAS BEEN DISCONTUNUED!!! THIS NO LONGER WORKS!!!
+// API HAS BEEN DISCONTUNUED!!! THIS NO LONGER WORKS!!!
+// API HAS BEEN DISCONTUNUED!!! THIS NO LONGER WORKS!!!
